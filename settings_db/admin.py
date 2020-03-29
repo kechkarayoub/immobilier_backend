@@ -67,13 +67,6 @@ class SettingsDbAdmin(TranslationAdmin):
                 get_header_image_preview, "header_text_color", "logo", get_logo_image_preview
             ]
         }),
-        (_("E-mail de rappel de paiement"), {
-            'fields': [
-                'reminder_payment_email_object', 'reminder_payment_email_message1', 'reminder_payment_email_message2',
-                'reminder_payment_email_message3', "reminder_payment_email_footer_line1",
-                'reminder_payment_email_footer_line2'
-            ]
-        }),
         (_("Paramètres de la page d'accueil"), {
             'fields': [
                 'home_page_title_1', 'home_page_title_2', 'home_page_row_1_title', 'home_page_row_1_p_1',
