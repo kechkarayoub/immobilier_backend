@@ -1,0 +1,1458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: funding/templates/funding/funding_admin_template.html:14
+#: funding/templates/funding/funding_bank_template.html:14
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-29 23:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin_data/admin.py:12 funding/admin.py:11 item/admin.py:17 item/admin.py:23
+#: settings_db/admin.py:16 settings_db/admin.py:22 settings_db/admin.py:28
+#: settings_db/admin.py:34 testimonial/admin.py:16
+msgid "Aucun fichier sélectionné!"
+msgstr ""
+
+#: admin_data/admin.py:16 funding/admin.py:15 item/admin.py:27 item/admin.py:30
+#: testimonial/admin.py:20
+msgid "Aperçu de l'image"
+msgstr ""
+
+#: admin_data/admin.py:29
+msgid "Informations genérales"
+msgstr ""
+
+#: admin_data/admin.py:32 item/admin.py:74
+msgid "Options de la carte"
+msgstr ""
+
+#: admin_data/models.py:13 client/models.py:83 item/models.py:23
+msgid "Adresse"
+msgstr ""
+
+#: admin_data/models.py:14
+msgid "Nom de l'agence"
+msgstr ""
+
+#: admin_data/models.py:15 client/models.py:86 contact/models.py:15
+#: contact/models.py:61 contact/models.py:136
+#: contact/templates/contact/contact_buying_template.html:23
+#: contact/templates/contact/contact_renting_template.html:23
+#: contact/templates/contact/contact_template.html:24 funding/models.py:13
+#: funding/templates/funding/funding_admin_template.html:23
+#: funding/templates/funding/funding_bank_template.html:23
+#: newsletter/models.py:11
+msgid "Email"
+msgstr ""
+
+#: admin_data/models.py:16
+msgid "Activer la carte"
+msgstr ""
+
+#: admin_data/models.py:17
+msgid "Fax"
+msgstr ""
+
+#: admin_data/models.py:18
+msgid "Nom complet"
+msgstr ""
+
+#: admin_data/models.py:19
+msgid "GPS Latitude"
+msgstr ""
+
+#: admin_data/models.py:20
+msgid "GPS Longitude"
+msgstr ""
+
+#: admin_data/models.py:21
+msgid "L'image de l'administrateur"
+msgstr ""
+
+#: admin_data/models.py:22 client/models.py:91 contact/models.py:20
+#: contact/models.py:74 contact/models.py:149
+#: contact/templates/contact/contact_buying_template.html:28
+#: contact/templates/contact/contact_renting_template.html:28
+#: contact/templates/contact/contact_template.html:29
+msgid "Téléphone"
+msgstr ""
+
+#: backend/settings/base.py:156 backend/settings/special_settings.py:14
+msgid "Anglais"
+msgstr ""
+
+#: backend/settings/base.py:157 backend/settings/special_settings.py:15
+msgid "Français"
+msgstr ""
+
+#: backend/settings/special_settings.py:13
+msgid "Arabe"
+msgstr ""
+
+#: backend/static_variables.py:5
+msgid "Choisir une ville"
+msgstr ""
+
+#: backend/static_variables.py:6
+msgid "Agadir"
+msgstr ""
+
+#: backend/static_variables.py:7
+msgid "Aïn El Aouda"
+msgstr ""
+
+#: backend/static_variables.py:8
+msgid "Aïn Harrouda"
+msgstr ""
+
+#: backend/static_variables.py:9
+msgid "Aït Melloul"
+msgstr ""
+
+#: backend/static_variables.py:10
+msgid "Al Hoceïma"
+msgstr ""
+
+#: backend/static_variables.py:11
+msgid "Assilah"
+msgstr ""
+
+#: backend/static_variables.py:12
+msgid "Azemmour"
+msgstr ""
+
+#: backend/static_variables.py:13
+msgid "Azilal"
+msgstr ""
+
+#: backend/static_variables.py:14
+msgid "Azrou"
+msgstr ""
+
+#: backend/static_variables.py:15
+msgid "Bejaad"
+msgstr ""
+
+#: backend/static_variables.py:16
+msgid "Ben Ahmed"
+msgstr ""
+
+#: backend/static_variables.py:17
+msgid "Ben Guerir"
+msgstr ""
+
+#: backend/static_variables.py:18
+msgid "Ben Slimane"
+msgstr ""
+
+#: backend/static_variables.py:19
+msgid "Ben Taïeb"
+msgstr ""
+
+#: backend/static_variables.py:20
+msgid "Beni Mellal"
+msgstr ""
+
+#: backend/static_variables.py:21
+msgid "Berkane"
+msgstr ""
+
+#: backend/static_variables.py:22
+msgid "Berrechid"
+msgstr ""
+
+#: backend/static_variables.py:23
+msgid "Bouarfa"
+msgstr ""
+
+#: backend/static_variables.py:24
+msgid "Bouizakarne"
+msgstr ""
+
+#: backend/static_variables.py:25
+msgid "Boujdour"
+msgstr ""
+
+#: backend/static_variables.py:26
+msgid "Boulemane"
+msgstr ""
+
+#: backend/static_variables.py:27
+msgid "Bouskoura"
+msgstr ""
+
+#: backend/static_variables.py:28
+msgid "Bouznika"
+msgstr ""
+
+#: backend/static_variables.py:29
+msgid "Casablanca"
+msgstr ""
+
+#: backend/static_variables.py:30
+msgid "Chefchaouen"
+msgstr ""
+
+#: backend/static_variables.py:31
+msgid "Chichaoua"
+msgstr ""
+
+#: backend/static_variables.py:32
+msgid "Dakhla"
+msgstr ""
+
+#: backend/static_variables.py:33
+msgid "Demnate"
+msgstr ""
+
+#: backend/static_variables.py:34
+msgid "Deroua"
+msgstr ""
+
+#: backend/static_variables.py:35
+msgid "Echemmaia"
+msgstr ""
+
+#: backend/static_variables.py:36
+msgid "El Hajeb"
+msgstr ""
+
+#: backend/static_variables.py:37
+msgid "El Jadida"
+msgstr ""
+
+#: backend/static_variables.py:38
+msgid "El Mansouria"
+msgstr ""
+
+#: backend/static_variables.py:39
+msgid "Errachidia"
+msgstr ""
+
+#: backend/static_variables.py:40
+msgid "Er-Rich"
+msgstr ""
+
+#: backend/static_variables.py:41
+msgid "Essaouira"
+msgstr ""
+
+#: backend/static_variables.py:42
+msgid "Es-Semara"
+msgstr ""
+
+#: backend/static_variables.py:43
+msgid "Fès"
+msgstr ""
+
+#: backend/static_variables.py:44
+msgid "Figuig"
+msgstr ""
+
+#: backend/static_variables.py:45
+msgid "Fnideq"
+msgstr ""
+
+#: backend/static_variables.py:46
+msgid "Fquih Ben Salah"
+msgstr ""
+
+#: backend/static_variables.py:47
+msgid "Goulmima"
+msgstr ""
+
+#: backend/static_variables.py:48
+msgid "Guelmim"
+msgstr ""
+
+#: backend/static_variables.py:49
+msgid "Guercif"
+msgstr ""
+
+#: backend/static_variables.py:50
+msgid "Guisser"
+msgstr ""
+
+#: backend/static_variables.py:51
+msgid "Ifrane"
+msgstr ""
+
+#: backend/static_variables.py:52
+msgid "Imintanoute"
+msgstr ""
+
+#: backend/static_variables.py:53
+msgid "Inezgane"
+msgstr ""
+
+#: backend/static_variables.py:54
+msgid "Jamaat Shaim"
+msgstr ""
+
+#: backend/static_variables.py:55
+msgid "Jerada"
+msgstr ""
+
+#: backend/static_variables.py:56
+msgid "Jorf"
+msgstr ""
+
+#: backend/static_variables.py:57
+msgid "Kalaat M'Gouna"
+msgstr ""
+
+#: backend/static_variables.py:58
+msgid "Kasba Tadla"
+msgstr ""
+
+#: backend/static_variables.py:59
+msgid "Kénitra"
+msgstr ""
+
+#: backend/static_variables.py:60
+msgid "Khémisset"
+msgstr ""
+
+#: backend/static_variables.py:61
+msgid "Khénifra"
+msgstr ""
+
+#: backend/static_variables.py:62
+msgid "Khouribga"
+msgstr ""
+
+#: backend/static_variables.py:63
+msgid "Ksar El Kébir"
+msgstr ""
+
+#: backend/static_variables.py:64
+msgid "Laâounate"
+msgstr ""
+
+#: backend/static_variables.py:65
+msgid "Laayoune"
+msgstr ""
+
+#: backend/static_variables.py:66
+msgid "Lbir Jdid"
+msgstr ""
+
+#: backend/static_variables.py:67
+msgid "Loualidia"
+msgstr ""
+
+#: backend/static_variables.py:68
+msgid "Madagh"
+msgstr ""
+
+#: backend/static_variables.py:69
+msgid "Marrakech"
+msgstr ""
+
+#: backend/static_variables.py:70
+msgid "Martil"
+msgstr ""
+
+#: backend/static_variables.py:71
+msgid "Massa"
+msgstr ""
+
+#: backend/static_variables.py:72
+msgid "M'Diq"
+msgstr ""
+
+#: backend/static_variables.py:73
+msgid "Mehdya"
+msgstr ""
+
+#: backend/static_variables.py:74
+msgid "Meknès"
+msgstr ""
+
+#: backend/static_variables.py:75
+msgid "Midelt"
+msgstr ""
+
+#: backend/static_variables.py:76
+msgid "Missour"
+msgstr ""
+
+#: backend/static_variables.py:77
+msgid "Mohammédia"
+msgstr ""
+
+#: backend/static_variables.py:78
+msgid "Moulay Abdallah"
+msgstr ""
+
+#: backend/static_variables.py:79
+msgid "Moulay Ali Chérif"
+msgstr ""
+
+#: backend/static_variables.py:80
+msgid "Moulay Bouazza"
+msgstr ""
+
+#: backend/static_variables.py:81
+msgid "Moulay Bousselham"
+msgstr ""
+
+#: backend/static_variables.py:82
+msgid "Moulay Brahim"
+msgstr ""
+
+#: backend/static_variables.py:83
+msgid "M'Rirt"
+msgstr ""
+
+#: backend/static_variables.py:84
+msgid "Nador"
+msgstr ""
+
+#: backend/static_variables.py:85
+msgid "Nouaceur"
+msgstr ""
+
+#: backend/static_variables.py:86
+msgid "Ouaouizeght"
+msgstr ""
+
+#: backend/static_variables.py:87
+msgid "Oued Zem"
+msgstr ""
+
+#: backend/static_variables.py:88
+msgid "Ouezzane"
+msgstr ""
+
+#: backend/static_variables.py:89
+msgid "Ouislane"
+msgstr ""
+
+#: backend/static_variables.py:90
+msgid "Oujda"
+msgstr ""
+
+#: backend/static_variables.py:91
+msgid "Oulmès"
+msgstr ""
+
+#: backend/static_variables.py:92
+msgid "Rabat"
+msgstr ""
+
+#: backend/static_variables.py:93
+msgid "Safi"
+msgstr ""
+
+#: backend/static_variables.py:94
+msgid "Saïdia"
+msgstr ""
+
+#: backend/static_variables.py:95
+msgid "Salé"
+msgstr ""
+
+#: backend/static_variables.py:96
+msgid "Sefrou"
+msgstr ""
+
+#: backend/static_variables.py:97
+msgid "Settat"
+msgstr ""
+
+#: backend/static_variables.py:98
+msgid "Sidi Bennour"
+msgstr ""
+
+#: backend/static_variables.py:99
+msgid "Sidi Bouknadel"
+msgstr ""
+
+#: backend/static_variables.py:100
+msgid "Sidi Bouzid"
+msgstr ""
+
+#: backend/static_variables.py:101
+msgid "Sidi Kacem"
+msgstr ""
+
+#: backend/static_variables.py:102
+msgid "Sidi Rahhal"
+msgstr ""
+
+#: backend/static_variables.py:103
+msgid "Sidi Slimane"
+msgstr ""
+
+#: backend/static_variables.py:104
+msgid "Sidi Smaïl"
+msgstr ""
+
+#: backend/static_variables.py:105
+msgid "Skhirate"
+msgstr ""
+
+#: backend/static_variables.py:106
+msgid "Soualem"
+msgstr ""
+
+#: backend/static_variables.py:107
+msgid "Tafraout"
+msgstr ""
+
+#: backend/static_variables.py:108
+msgid "Tanger"
+msgstr ""
+
+#: backend/static_variables.py:109
+msgid "Tan-Tan"
+msgstr ""
+
+#: backend/static_variables.py:110
+msgid "Taounate"
+msgstr ""
+
+#: backend/static_variables.py:111
+msgid "Tarfaya"
+msgstr ""
+
+#: backend/static_variables.py:112
+msgid "Taourirt"
+msgstr ""
+
+#: backend/static_variables.py:113
+msgid "Taroudant"
+msgstr ""
+
+#: backend/static_variables.py:114
+msgid "Tata"
+msgstr ""
+
+#: backend/static_variables.py:115
+msgid "Taza"
+msgstr ""
+
+#: backend/static_variables.py:116
+msgid "Témara"
+msgstr ""
+
+#: backend/static_variables.py:117
+msgid "Tétouan"
+msgstr ""
+
+#: backend/static_variables.py:118
+msgid "Tinghir"
+msgstr ""
+
+#: backend/static_variables.py:119
+msgid "Tit Mellil"
+msgstr ""
+
+#: backend/static_variables.py:120
+msgid "Tiznit"
+msgstr ""
+
+#: backend/static_variables.py:121
+msgid "Youssoufia"
+msgstr ""
+
+#: backend/static_variables.py:122
+msgid "Zag"
+msgstr ""
+
+#: backend/static_variables.py:123
+msgid "Zagora"
+msgstr ""
+
+#: backend/static_variables.py:124
+msgid "Zemamra"
+msgstr ""
+
+#: backend/static_variables.py:128
+msgid "Type de la propriété"
+msgstr ""
+
+#: backend/static_variables.py:129 client/models.py:84
+msgid "Appartement"
+msgstr ""
+
+#: backend/static_variables.py:130
+msgid "Duplex"
+msgstr ""
+
+#: backend/static_variables.py:131
+msgid "Quadruplex"
+msgstr ""
+
+#: backend/static_variables.py:132
+msgid "Quintuplex"
+msgstr ""
+
+#: backend/static_variables.py:133
+msgid "Multi logements"
+msgstr ""
+
+#: backend/static_variables.py:134
+msgid "Maison de plain-pied"
+msgstr ""
+
+#: backend/static_variables.py:135
+msgid "Maison à étages"
+msgstr ""
+
+#: backend/static_variables.py:136
+msgid "Maison à paliers multiples"
+msgstr ""
+
+#: backend/static_variables.py:137
+msgid "Maison à un étage et demi"
+msgstr ""
+
+#: backend/static_variables.py:138
+msgid "Maison mobile"
+msgstr ""
+
+#: backend/static_variables.py:139
+msgid "Maison"
+msgstr ""
+
+#: backend/static_variables.py:140
+msgid "Loft / Studio"
+msgstr ""
+
+#: backend/static_variables.py:141
+msgid "Commerciale"
+msgstr ""
+
+#: backend/static_variables.py:142
+msgid "Industrielle"
+msgstr ""
+
+#: backend/static_variables.py:143
+msgid "Entreprise (fonds de commerce)"
+msgstr ""
+
+#: backend/static_variables.py:144
+msgid "Bulk (block sale)"
+msgstr ""
+
+#: backend/static_variables.py:145
+msgid "Terre"
+msgstr ""
+
+#: backend/static_variables.py:146
+msgid "Terrain"
+msgstr ""
+
+#: backend/static_variables.py:147
+msgid "Ferme"
+msgstr ""
+
+#: backend/static_variables.py:148
+msgid "Fermette"
+msgstr ""
+
+#: backend/static_variables.py:149 backend/static_variables.py:224
+msgid "Autre"
+msgstr ""
+
+#: backend/static_variables.py:153
+msgid "Choisir un type"
+msgstr ""
+
+#: backend/static_variables.py:154
+msgid "Isolé"
+msgstr ""
+
+#: backend/static_variables.py:155
+msgid "Jumelé"
+msgstr ""
+
+#: backend/static_variables.py:156
+msgid "En rangée"
+msgstr ""
+
+#: backend/static_variables.py:157
+msgid "En rangée sur coin"
+msgstr ""
+
+#: backend/static_variables.py:158
+msgid "Quadrex"
+msgstr ""
+
+#: backend/static_variables.py:159
+msgid "5 plex et plus"
+msgstr ""
+
+#: backend/static_variables.py:163 backend/static_variables.py:172
+msgid "Selectionner un nombre"
+msgstr ""
+
+#: backend/static_variables.py:164 backend/static_variables.py:173
+msgid "1"
+msgstr ""
+
+#: backend/static_variables.py:165 backend/static_variables.py:174
+msgid "2"
+msgstr ""
+
+#: backend/static_variables.py:166
+msgid "3"
+msgstr ""
+
+#: backend/static_variables.py:167
+msgid "4"
+msgstr ""
+
+#: backend/static_variables.py:168
+msgid "5 et plus"
+msgstr ""
+
+#: backend/static_variables.py:175
+msgid "3 et plus"
+msgstr ""
+
+#: backend/static_variables.py:179
+msgid "Choisir l'âge du construction"
+msgstr ""
+
+#: backend/static_variables.py:180
+msgid "Récemment construit"
+msgstr ""
+
+#: backend/static_variables.py:181
+msgid "Moins de 10 ans"
+msgstr ""
+
+#: backend/static_variables.py:182
+msgid "10 ans et plus"
+msgstr ""
+
+#: backend/static_variables.py:186
+msgid "À vendre"
+msgstr ""
+
+#: backend/static_variables.py:187
+msgid "À louer"
+msgstr ""
+
+#: backend/static_variables.py:188
+msgid "Vendue"
+msgstr ""
+
+#: backend/static_variables.py:192
+msgid "Non spécifié"
+msgstr ""
+
+#: backend/static_variables.py:193
+msgid "Moins de 250 000 DH"
+msgstr ""
+
+#: backend/static_variables.py:194
+msgid "250 000 DH - 350 000 DH"
+msgstr ""
+
+#: backend/static_variables.py:195
+msgid "350 000 DH - 450 000 DH"
+msgstr ""
+
+#: backend/static_variables.py:196
+msgid "450 000 DH - 550 000 DH"
+msgstr ""
+
+#: backend/static_variables.py:197
+msgid "Plus de 550 000 DH"
+msgstr ""
+
+#: backend/static_variables.py:225
+msgid "Achteur"
+msgstr ""
+
+#: backend/static_variables.py:226
+msgid "Vendeur"
+msgstr ""
+
+#: backend/static_variables.py:227
+msgid "Locataire"
+msgstr ""
+
+#: backend/views.py:59
+msgid "French"
+msgstr ""
+
+#: client/admin.py:33 settings_db/admin.py:61
+msgid "Paramètres générals"
+msgstr ""
+
+#: client/admin.py:38
+msgid "E-mail de rappel de paiement"
+msgstr ""
+
+#: client/models.py:21
+msgid "Nom du groupe"
+msgstr ""
+
+#: client/models.py:22 client/models.py:89 item/models.py:102
+#: newsletter/models.py:13 sociallink/models.py:22
+msgid "Est active"
+msgstr ""
+
+#: client/models.py:24
+msgid "1ere line du footer de l'email"
+msgstr ""
+
+#: client/models.py:27
+msgid "2eme line du footer de l'email"
+msgstr ""
+
+#: client/models.py:30
+msgid "Paragraphe 1 de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:36
+msgid "Paragraphe 2 de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:42
+msgid "Paragraphe 3 de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:46
+msgid "Sujet de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:58
+msgid "Rappelle: Paiement du loyer"
+msgstr ""
+
+#: client/models.py:59
+msgid ""
+"Veuillez payer votre loyer le 1er du mois. Si vous payer par Interac, "
+"veuillez utiliser le courriel suivant: Jalil.elmahboubi@gmail.com"
+msgstr ""
+
+#: client/models.py:61
+msgid ""
+"Une pénalité de 25.00$ sera ajouter après le 5 de chaque mois. \r\n"
+" Une pénalité de 125$ et demande de résiliation de votre bail si le retard "
+"dépasse 3 semaines."
+msgstr ""
+
+#: client/models.py:64
+msgid "Cordialement,"
+msgstr ""
+
+#: client/models.py:65
+msgid "Jalil ELMAHBOUBI"
+msgstr ""
+
+#: client/models.py:85 contact/models.py:14 contact/models.py:60
+#: contact/models.py:135 funding/models.py:20 testimonial/models.py:21
+msgid "Créé le"
+msgstr ""
+
+#: client/models.py:87 contact/models.py:16 contact/models.py:62
+#: contact/models.py:137 newsletter/models.py:12 testimonial/models.py:22
+msgid "Prénom"
+msgstr ""
+
+#: client/models.py:90 contact/models.py:17 contact/models.py:69
+#: contact/models.py:144
+#: contact/templates/contact/contact_buying_template.html:19
+#: contact/templates/contact/contact_template.html:20 newsletter/models.py:14
+#: testimonial/models.py:30
+msgid "Nom"
+msgstr ""
+
+#: client/models.py:92 newsletter/models.py:15
+msgid "Type"
+msgstr ""
+
+#: client/models.py:103
+msgid "Entrez une année et un mois valides.."
+msgstr ""
+
+#: client/templates/client/payment_reminder_email.html:7
+msgid "Bonjour,"
+msgstr ""
+
+#: contact/models.py:18 contact/templates/contact/contact_template.html:44
+msgid "Message"
+msgstr ""
+
+#: contact/models.py:19
+msgid "Sujet"
+msgstr ""
+
+#: contact/models.py:28 contact/models.py:103 contact/views.py:91
+#: contact/views.py:161 item/models.py:29
+msgid "Nombre de salles de bain"
+msgstr ""
+
+#: contact/models.py:35 contact/models.py:110 contact/views.py:93
+#: contact/views.py:163 item/models.py:36
+msgid "Nombre de chambres"
+msgstr ""
+
+#: contact/models.py:42 contact/models.py:117 contact/views.py:95
+#: contact/views.py:165 item/models.py:43
+msgid "Type de bâtiment"
+msgstr ""
+
+#: contact/models.py:48 contact/models.py:123 contact/views.py:96
+#: contact/views.py:166 item/models.py:60
+msgid "Ville"
+msgstr ""
+
+#: contact/models.py:54 contact/models.py:129 item/models.py:68
+msgid "L'âge du construction"
+msgstr ""
+
+#: contact/models.py:63 contact/models.py:138 contact/views.py:99
+#: contact/views.py:169 item/models.py:90
+msgid "Salle à manger"
+msgstr ""
+
+#: contact/models.py:64 contact/models.py:139 contact/views.py:100
+#: contact/views.py:170 item/models.py:91
+msgid "Cheminée"
+msgstr ""
+
+#: contact/models.py:65 contact/models.py:140 contact/views.py:101
+#: contact/views.py:171 item/models.py:92
+msgid "Garage"
+msgstr ""
+
+#: contact/models.py:66 contact/models.py:141 contact/views.py:102
+#: contact/views.py:172 item/models.py:93
+msgid "Jardin"
+msgstr ""
+
+#: contact/models.py:67 contact/models.py:142 contact/views.py:112
+#: contact/views.py:182 item/models.py:94
+msgid "Piscine"
+msgstr ""
+
+#: contact/models.py:68 contact/models.py:143
+msgid "A été traité"
+msgstr ""
+
+#: contact/models.py:70 contact/models.py:145
+msgid "Taille minimale de la propriété(m²)"
+msgstr ""
+
+#: contact/models.py:71
+msgid "Taille maximale de la propriété max(m²)"
+msgstr ""
+
+#: contact/models.py:72 contact/models.py:147 contact/views.py:109
+#: contact/views.py:179
+msgid "Date d'occupation"
+msgstr ""
+
+#: contact/models.py:73 contact/models.py:148 contact/views.py:110
+#: contact/views.py:180
+msgid "Autres caractéristiques"
+msgstr ""
+
+#: contact/models.py:76 contact/models.py:151 contact/views.py:107
+#: contact/views.py:177
+msgid "Intervalle de prix"
+msgstr ""
+
+#: contact/models.py:83 contact/models.py:158 contact/views.py:108
+#: contact/views.py:178 item/models.py:118
+msgid "Type de la Propriété"
+msgstr ""
+
+#: contact/models.py:90 contact/models.py:165 contact/views.py:111
+#: contact/views.py:181 item/models.py:127
+msgid "Statut"
+msgstr ""
+
+#: contact/models.py:146
+msgid "Taille maximale de la propriété(m²)"
+msgstr ""
+
+#: contact/templates/contact/contact_buying_template.html:6
+msgid "Achat d'une propriété!"
+msgstr ""
+
+#: contact/templates/contact/contact_buying_template.html:14
+#: contact/templates/contact/contact_renting_template.html:14
+#: contact/templates/contact/contact_template.html:15
+msgid "Informations du client"
+msgstr ""
+
+#: contact/templates/contact/contact_buying_template.html:43
+#: contact/templates/contact/contact_renting_template.html:43
+msgid "Information de la propriété"
+msgstr ""
+
+#: contact/templates/contact/contact_renting_template.html:6
+msgid "Location d'une propriété!"
+msgstr ""
+
+#: contact/templates/contact/contact_renting_template.html:19
+#: funding/templates/funding/funding_admin_template.html:19
+#: funding/templates/funding/funding_bank_template.html:19
+msgid "Name"
+msgstr ""
+
+#: contact/templates/contact/contact_template.html:7
+msgid "Contact du client"
+msgstr ""
+
+#: contact/templates/contact/contact_template.html:57
+msgid "Le client a besoin de plus d'informations sur cette propriété"
+msgstr ""
+
+#: contact/views.py:97 contact/views.py:167
+msgid "Âge de construction"
+msgstr ""
+
+#: contact/views.py:103 contact/views.py:173
+msgid "Taille de la propriété maximale"
+msgstr ""
+
+#: contact/views.py:105 contact/views.py:175
+msgid "Taille de la propriété minimale"
+msgstr ""
+
+#: contact/views.py:122
+msgid "Achat d'une propriété"
+msgstr ""
+
+#: contact/views.py:192
+msgid "location d'une propriété"
+msgstr ""
+
+#: funding/models.py:15
+msgid "Logo de la banque."
+msgstr ""
+
+#: funding/models.py:19
+msgid "Nom de la banque"
+msgstr ""
+
+#: funding/models.py:21
+msgid "Étiquette du champ libre"
+msgstr ""
+
+#: funding/models.py:22
+msgid "Valeur du champ libre"
+msgstr ""
+
+#: funding/templates/funding/funding_admin_template.html:6
+#: funding/templates/funding/funding_bank_template.html:6
+msgid "Financement du client!"
+msgstr ""
+
+#: item/admin.py:52
+msgid "Informations générales"
+msgstr ""
+
+#: item/admin.py:55
+msgid "Caractéristiques"
+msgstr ""
+
+#: item/admin.py:62
+msgid "Caractéristiques économiques"
+msgstr ""
+
+#: item/admin.py:68
+msgid "Champs ajoutés"
+msgstr ""
+
+#: item/models.py:17
+msgid "Étiquette du 1er champ ajouté"
+msgstr ""
+
+#: item/models.py:18 item/models.py:20 item/models.py:22
+msgid "Valeur du 1er champ ajouté"
+msgstr ""
+
+#: item/models.py:19
+msgid "Étiquette du 2eme champ ajouté"
+msgstr ""
+
+#: item/models.py:21
+msgid "Étiquette du 3eme champ ajouté"
+msgstr ""
+
+#: item/models.py:25
+msgid "Revenus annuels ($)"
+msgstr ""
+
+#: item/models.py:27
+msgid "Nombre d'appartements"
+msgstr ""
+
+#: item/models.py:50
+msgid "Description détaillée"
+msgstr ""
+
+#: item/models.py:52
+msgid "Description détaillée en pdf"
+msgstr ""
+
+#: item/models.py:57
+msgid "CCD"
+msgstr ""
+
+#: item/models.py:75
+msgid "Coût par logement (CPL) ($)"
+msgstr ""
+
+#: item/models.py:77
+msgid "Created at"
+msgstr ""
+
+#: item/models.py:78
+msgid "Description"
+msgstr ""
+
+#: item/models.py:80
+msgid "Mise de fond minimal ($)"
+msgstr ""
+
+#: item/models.py:83
+msgid "Valeur économique ($)"
+msgstr ""
+
+#: item/models.py:85
+msgid "Latitude"
+msgstr ""
+
+#: item/models.py:86
+msgid "Longitude"
+msgstr ""
+
+#: item/models.py:88
+msgid "Multiplicateur de revenu brut (MRB)"
+msgstr ""
+
+#: item/models.py:95
+msgid "Description des logements"
+msgstr ""
+
+#: item/models.py:97
+msgid "L'image de la carte de la propriété."
+msgstr ""
+
+#: item/models.py:101 item/models.py:178
+msgid "Id"
+msgstr ""
+
+#: item/models.py:103 sociallink/models.py:23 usefullinks/models.py:10
+#: usefullinks/models.py:20
+msgid "Étiquette"
+msgstr ""
+
+#: item/models.py:104
+msgid "Taille de la propriété(m²)"
+msgstr ""
+
+#: item/models.py:106
+msgid "Prêt maximal ($)"
+msgstr ""
+
+#: item/models.py:109
+msgid "Multiplicateur de revenu net (MRN)"
+msgstr ""
+
+#: item/models.py:112
+msgid "Taux global d'actualisation (TGA) (%)"
+msgstr ""
+
+#: item/models.py:115
+msgid "Prix"
+msgstr ""
+
+#: item/models.py:125
+msgid "Brèf description"
+msgstr ""
+
+#: item/models.py:132
+msgid "Avec Carte"
+msgstr ""
+
+#: item/models.py:155
+msgid "Image de l'article."
+msgstr ""
+
+#: item/models.py:161
+msgid "L'article."
+msgstr ""
+
+#: item/templates/item/email_template.html:55
+#: item/templates/item/email_template.html:57
+#: newsletter/templates/newsletter/footer_email.html:2
+msgid "Pas intéressé par nos messages?"
+msgstr ""
+
+#: item/templates/item/email_template.html:55
+#: item/templates/item/email_template.html:57
+#: newsletter/templates/newsletter/footer_email.html:2
+msgid "Se désabonner"
+msgstr ""
+
+#: item/templates/item/new_item_template.html:8
+msgid "Une propriété a été mise à jour!"
+msgstr ""
+
+#: item/templates/item/new_item_template.html:10
+msgid "Une nouvelle propriété a été ajoutée!"
+msgstr ""
+
+#: item/templates/item/new_item_template.html:47
+msgid "Plus d'informations..."
+msgstr ""
+
+#: item/views.py:160
+msgid "Une propriété a été mise à jour"
+msgstr ""
+
+#: newsletter/templates/newsletter/resubscription_template.html:7
+msgid "Réinscrire à la newsletter"
+msgstr ""
+
+#: newsletter/templates/newsletter/resubscription_template.html:12
+#: newsletter/templates/newsletter/subscription_template.html:12
+#: newsletter/templates/newsletter/unsubscription_template.html:12
+msgid "Chèr(e)"
+msgstr ""
+
+#: newsletter/templates/newsletter/resubscription_template.html:17
+msgid "Merci de vous être réinscrit à notre newsletter."
+msgstr ""
+
+#: newsletter/templates/newsletter/resubscription_template.html:22
+#: newsletter/templates/newsletter/subscription_template.html:22
+msgid "Visitez:"
+msgstr ""
+
+#: newsletter/templates/newsletter/subscription_template.html:7
+msgid "S'abonner à la newsletter"
+msgstr ""
+
+#: newsletter/templates/newsletter/subscription_template.html:17
+msgid "Merci de vous être abonné à notre newsletter."
+msgstr ""
+
+#: newsletter/templates/newsletter/unsubscription_template.html:7
+msgid "Se désabonner à la newsletter"
+msgstr ""
+
+#: newsletter/templates/newsletter/unsubscription_template.html:17
+msgid "Vous nous manquerez!"
+msgstr ""
+
+#: newsletter/templates/newsletter/unsubscription_template.html:22
+msgid ""
+"Vous avez récemment annulé votre abonnement à notre newsletter et nous "
+"sommes désolés de vous voir partir. Merci d'être avec nous. Les raisons de "
+"votre départ peuvent être diverses et nous espérons vraiment que vous "
+"pourrez nous aider à apprendre et à nous améliorer."
+msgstr ""
+
+#: newsletter/templates/newsletter/unsubscription_template.html:27
+msgid "Vous avez annulé votre abonnement par erreur?"
+msgstr ""
+
+#: newsletter/templates/newsletter/unsubscription_template.html:27
+msgid "Ré-abonnez-vous d'ici"
+msgstr ""
+
+#: newsletter/views.py:77
+msgid "Abonnement à la newsletter"
+msgstr ""
+
+#: newsletter/views.py:105 newsletter/views.py:154
+msgid "Désolé, vous n'êtes pas inscrit à notre newsletter!"
+msgstr ""
+
+#: newsletter/views.py:128
+msgid "Désinscription à la newsletter"
+msgstr ""
+
+#: newsletter/views.py:133
+msgid "Votre abonnement est désactivé!"
+msgstr ""
+
+#: newsletter/views.py:138
+msgid "Votre abonnement est déjà désactivé!"
+msgstr ""
+
+#: newsletter/views.py:184
+msgid "Réinscription à la newsletter"
+msgstr ""
+
+#: newsletter/views.py:189
+msgid "Votre abonnement est réactivé!"
+msgstr ""
+
+#: newsletter/views.py:194
+msgid "Votre abonnement est déjà activé!"
+msgstr ""
+
+#: settings_db/admin.py:38 settings_db/admin.py:42
+msgid "Aperçu de l'image du background de l'entête"
+msgstr ""
+
+#: settings_db/admin.py:46
+msgid "Aperçu de l'image principale du background de l'entête"
+msgstr ""
+
+#: settings_db/admin.py:50
+msgid "Aperçu du l'image du logo"
+msgstr ""
+
+#: settings_db/admin.py:64
+msgid "Paramètres de l'entête"
+msgstr ""
+
+#: settings_db/admin.py:70
+msgid "Paramètres de la page d'accueil"
+msgstr ""
+
+#: settings_db/models.py:16
+msgid "Image d'en-tête"
+msgstr ""
+
+#: settings_db/models.py:22
+msgid "Image d'arrière-plan de l'en-tête"
+msgstr ""
+
+#: settings_db/models.py:26
+msgid "Couleur du texte de l'en-tête"
+msgstr ""
+
+#: settings_db/models.py:28
+msgid "Image du logo"
+msgstr ""
+
+#: settings_db/models.py:32
+msgid "Image d'arrière-plan du body"
+msgstr ""
+
+#: settings_db/models.py:36
+msgid "Nom du site"
+msgstr ""
+
+#: settings_db/models.py:38
+msgid "1er ligne du titre"
+msgstr ""
+
+#: settings_db/models.py:39
+msgid "2eme ligne du titre"
+msgstr ""
+
+#: settings_db/models.py:41
+msgid "Titre de la première partie"
+msgstr ""
+
+#: settings_db/models.py:42
+msgid "1er paragraphe de la première partie"
+msgstr ""
+
+#: settings_db/models.py:43
+msgid "2eme paragraphe de la première partie"
+msgstr ""
+
+#: settings_db/models.py:44
+msgid "3eme paragraphe de la première partie"
+msgstr ""
+
+#: settings_db/models.py:46
+msgid "Titre de la deuxième partie"
+msgstr ""
+
+#: settings_db/models.py:47
+msgid "1er paragraphe de la deuxième partie"
+msgstr ""
+
+#: settings_db/models.py:48
+msgid "2eme paragraphe de la deuxième partie"
+msgstr ""
+
+#: settings_db/models.py:49
+msgid "3eme paragraphe de la deuxième partie"
+msgstr ""
+
+#: settings_db/models.py:51
+msgid "Titre de la troisième partie"
+msgstr ""
+
+#: settings_db/models.py:52
+msgid "1er paragraphe de la troisième partie"
+msgstr ""
+
+#: settings_db/models.py:53
+msgid "2eme paragraphe de la troisième partie"
+msgstr ""
+
+#: settings_db/models.py:54
+msgid "3eme paragraphe de la troisième partie"
+msgstr ""
+
+#: sociallink/models.py:21
+msgid "Fa icon"
+msgstr ""
+
+#: sociallink/models.py:24 usefullinks/models.py:21
+msgid "Url"
+msgstr ""
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr ""
+
+#: templates/admin/base_site.html:9
+msgid "Django administration"
+msgstr ""
+
+#: testimonial/models.py:14
+msgid "City"
+msgstr ""
+
+#: testimonial/models.py:24
+msgid "L'image du témoin."
+msgstr ""
+
+#: testimonial/models.py:28
+msgid "Couleur de fond des initiales"
+msgstr ""
+
+#: testimonial/models.py:29
+msgid "Couleur des initiales"
+msgstr ""
+
+#: testimonial/models.py:31
+msgid "Témoignage"
+msgstr ""
+
+#: usefullinks/models.py:25
+msgid "Catégorie du lien"
+msgstr ""
+
+#: usefullinks/views.py:24
+msgid "Le guide de l'acheteur (PDF)"
+msgstr ""
+
+#: usefullinks/views.py:28
+msgid "Le guide du vendeur (PDF)"
+msgstr ""
