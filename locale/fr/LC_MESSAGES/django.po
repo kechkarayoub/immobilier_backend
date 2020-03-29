@@ -3,11 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#: funding/templates/funding/funding_admin_template.html:14
+#: funding/templates/funding/funding_bank_template.html:14
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-01 20:42+0000\n"
+"POT-Creation-Date: 2020-03-28 09:36+0000\n"
 "PO-Revision-Date: 2019-12-01 20:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,674 +20,881 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.2.4\n"
 
-#: .\admin_data\admin.py:12 .\funding\admin.py:12 .\item\admin.py:17
-#: .\item\admin.py:23 .\settings_db\admin.py:12 .\settings_db\admin.py:18
-#: .\settings_db\admin.py:24 .\settings_db\admin.py:30
-#: .\testimonial\admin.py:12
+#: admin_data/admin.py:12 funding/admin.py:11 item/admin.py:17 item/admin.py:23
+#: settings_db/admin.py:16 settings_db/admin.py:22 settings_db/admin.py:28
+#: settings_db/admin.py:34 testimonial/admin.py:16
 msgid "No file selected!"
 msgstr "Aucun fichier sélectionné!"
 
-#: .\admin_data\admin.py:16 .\funding\admin.py:16 .\item\admin.py:27
-#: .\item\admin.py:30 .\testimonial\admin.py:16
+#: admin_data/admin.py:16 funding/admin.py:15 item/admin.py:27 item/admin.py:30
+#: testimonial/admin.py:20
 msgid "Image Preview"
 msgstr "Aperçu de l'image"
 
-#: .\admin_data\admin.py:29 .\item\admin.py:52
+#: admin_data/admin.py:29
 msgid "General information"
 msgstr "Informations générales"
 
-#: .\admin_data\admin.py:32 .\item\admin.py:70
+#: admin_data/admin.py:32
 msgid "Map options"
 msgstr "Options de la carte"
 
-#: .\admin_data\models.py:13 .\item\models.py:22
-msgid "Address"
+#: admin_data/models.py:13 client/models.py:83 item/models.py:23
+#, fuzzy
+#| msgid "Address"
+msgid "Adresse"
 msgstr "Adresse"
 
-#: .\admin_data\models.py:14
-msgid "Royal Le page Triomphe"
-msgstr "Royal Le page Triomphe"
+#: admin_data/models.py:14
+msgid "Nom de l'agence"
+msgstr ""
 
-#: .\admin_data\models.py:15 .\contact\models.py:15 .\contact\models.py:61
-#: .\contact\templates\contact\contact_buying_template.html:23
-#: .\contact\templates\contact\contact_template.html:24 .\funding\models.py:12
-#: .\funding\models.py:43
-#: .\funding\templates\funding\funding_admin_template.html:23
-#: .\funding\templates\funding\funding_bank_template.html:23
-#: .\newsletter\models.py:12
+#: admin_data/models.py:15 client/models.py:86 contact/models.py:15
+#: contact/models.py:61 contact/models.py:136
+#: contact/templates/contact/contact_buying_template.html:23
+#: contact/templates/contact/contact_renting_template.html:23
+#: contact/templates/contact/contact_template.html:24 funding/models.py:13
+#: funding/templates/funding/funding_admin_template.html:23
+#: funding/templates/funding/funding_bank_template.html:23
+#: newsletter/models.py:11
 msgid "Email"
 msgstr "Email"
 
-#: .\admin_data\models.py:16
-msgid "Enable map"
-msgstr "Activer la carte"
+#: admin_data/models.py:16
+msgid "Activer la carte"
+msgstr ""
 
-#: .\admin_data\models.py:17
+#: admin_data/models.py:17
 msgid "Fax"
 msgstr "Fax"
 
-#: .\admin_data\models.py:18
-msgid "Full name"
-msgstr "Nom complet"
+#: admin_data/models.py:18
+msgid "Nom complet"
+msgstr ""
 
-#: .\admin_data\models.py:19
+#: admin_data/models.py:19
 msgid "GPS Latitude"
 msgstr "GPS Latitude"
 
-#: .\admin_data\models.py:20
+#: admin_data/models.py:20
 msgid "GPS Longitude"
 msgstr "GPS Longitude"
 
-#: .\admin_data\models.py:21
-msgid "Admin's image"
-msgstr "L'image de l'administrateur"
+#: admin_data/models.py:21
+msgid "L'image de l'administrateur"
+msgstr ""
 
-#: .\admin_data\models.py:22
-msgid "Telephone"
+#: admin_data/models.py:22 client/models.py:91 contact/models.py:20
+#: contact/models.py:74 contact/models.py:149
+#, fuzzy
+#| msgid "Telephone"
+msgid "Téléphone"
 msgstr "Téléphone"
 
-#: .\backend\settings\base.py:148
+#: backend/settings/base.py:156 backend/settings/special_settings.py:16
 msgid "English"
 msgstr "Anglais"
 
-#: .\backend\settings\base.py:149 .\backend\views.py:59
+#: backend/settings/base.py:157 backend/settings/special_settings.py:17
+#: backend/views.py:59
 msgid "French"
 msgstr "Français"
 
-#: .\backend\static_variables.py:5
+#: backend/static_variables.py:5
 msgid "Select city"
 msgstr "Choisir une ville"
 
-#: .\backend\static_variables.py:41
+#: backend/static_variables.py:41
 msgid "Brome Lake"
 msgstr "Lac-Brome"
 
-#: .\backend\static_variables.py:128
+#: backend/static_variables.py:128
 msgid "Greater Sudbury"
 msgstr "Grand Sudbury"
 
-#: .\backend\static_variables.py:131
+#: backend/static_variables.py:131
 msgid "Haldimand County"
 msgstr "Comté de Haldimand"
 
-#: .\backend\static_variables.py:205
+#: backend/static_variables.py:205
 msgid "Montreal"
 msgstr "Montréal"
 
-#: .\backend\static_variables.py:206
+#: backend/static_variables.py:206
 msgid "Montreal West"
 msgstr "Montréal Ouest"
 
-#: .\backend\static_variables.py:207
+#: backend/static_variables.py:207
 msgid "Montreal-East"
 msgstr "Montréal Est"
 
-#: .\backend\static_variables.py:257
+#: backend/static_variables.py:257
 msgid "Prince Edward County"
 msgstr "Comté de Prince Edward"
 
-#: .\backend\static_variables.py:261
+#: backend/static_variables.py:261
 msgid "Quebec"
 msgstr "Québec"
 
-#: .\backend\static_variables.py:392
+#: backend/static_variables.py:392
 msgid "Select property type"
 msgstr "Choisir un type"
 
-#: .\backend\static_variables.py:393
+#: backend/static_variables.py:393
 msgid "Apartment"
 msgstr "Appartement"
 
-#: .\backend\static_variables.py:394
+#: backend/static_variables.py:394
 msgid "Duplex"
 msgstr "Duplex"
 
-#: .\backend\static_variables.py:395
+#: backend/static_variables.py:395
 msgid "Quadruplex"
 msgstr "Quadruplex"
 
-#: .\backend\static_variables.py:396
+#: backend/static_variables.py:396
 msgid "Quintuplex"
 msgstr "Quintuplex"
 
-#: .\backend\static_variables.py:397
+#: backend/static_variables.py:397
 msgid "Multiple housing"
 msgstr "Multi logements"
 
-#: .\backend\static_variables.py:398
+#: backend/static_variables.py:398
 msgid "Ground floor house"
 msgstr "Maison de plain-pied"
 
-#: .\backend\static_variables.py:399
+#: backend/static_variables.py:399
 msgid "Two or more storey"
 msgstr "Maison à étages"
 
-#: .\backend\static_variables.py:400
+#: backend/static_variables.py:400
 msgid "Split-level"
 msgstr "Maison à paliers multiples"
 
-#: .\backend\static_variables.py:401
+#: backend/static_variables.py:401
 msgid "One-and-a-half-storey house"
 msgstr "Maison à un étage et demi"
 
-#: .\backend\static_variables.py:402
+#: backend/static_variables.py:402
 msgid "Mobile home"
 msgstr "Maison mobile"
 
-#: .\backend\static_variables.py:403
+#: backend/static_variables.py:403
 msgid "House"
 msgstr "Maison"
 
-#: .\backend\static_variables.py:404
+#: backend/static_variables.py:404
 msgid "Loft / Studio"
 msgstr "Loft / Studio"
 
-#: .\backend\static_variables.py:405
+#: backend/static_variables.py:405
 msgid "Commercial"
 msgstr "Commerciale"
 
-#: .\backend\static_variables.py:406
+#: backend/static_variables.py:406
 msgid "Industrial"
 msgstr "Industrielle"
 
-#: .\backend\static_variables.py:407
+#: backend/static_variables.py:407
 msgid "Company (business)"
 msgstr "Entreprise (fonds de commerce)"
 
-#: .\backend\static_variables.py:408
+#: backend/static_variables.py:408
 msgid "Bulk (block sale)"
 msgstr ""
 
-#: .\backend\static_variables.py:409
+#: backend/static_variables.py:409
 msgid "Land"
 msgstr "Terre"
 
-#: .\backend\static_variables.py:410
+#: backend/static_variables.py:410
 msgid "Lot"
 msgstr "Terrain"
 
-#: .\backend\static_variables.py:411
+#: backend/static_variables.py:411
 msgid "Farm"
 msgstr "Ferme"
 
-#: .\backend\static_variables.py:412
+#: backend/static_variables.py:412
 msgid "Hobby farm"
 msgstr "Fermette"
 
-#: .\backend\static_variables.py:413
+#: backend/static_variables.py:413
 msgid "Other"
 msgstr "Autre"
 
-#: .\backend\static_variables.py:417
+#: backend/static_variables.py:417
 msgid "Select a type"
 msgstr "Choisir un type"
 
-#: .\backend\static_variables.py:418
+#: backend/static_variables.py:418
 msgid "Detached"
 msgstr "Isolé"
 
-#: .\backend\static_variables.py:419
+#: backend/static_variables.py:419
 msgid "Semi detached"
 msgstr "Jumelé"
 
-#: .\backend\static_variables.py:420
+#: backend/static_variables.py:420
 msgid "Attached"
 msgstr "En rangée"
 
-#: .\backend\static_variables.py:421
+#: backend/static_variables.py:421
 msgid "Attached corner unit"
 msgstr "En rangée sur coin"
 
-#: .\backend\static_variables.py:422
+#: backend/static_variables.py:422
 msgid "Quadrex"
 msgstr "Quadrex"
 
-#: .\backend\static_variables.py:423
+#: backend/static_variables.py:423
 msgid "5 plex and more"
 msgstr "5 plex et plus"
 
-#: .\backend\static_variables.py:426 .\backend\static_variables.py:435
+#: backend/static_variables.py:427 backend/static_variables.py:436
 msgid "Select a number"
 msgstr ""
 
-#: .\backend\static_variables.py:427 .\backend\static_variables.py:436
+#: backend/static_variables.py:428 backend/static_variables.py:437
 msgid "1"
 msgstr "1"
 
-#: .\backend\static_variables.py:428 .\backend\static_variables.py:437
+#: backend/static_variables.py:429 backend/static_variables.py:438
 msgid "2"
 msgstr "2"
 
-#: .\backend\static_variables.py:429
+#: backend/static_variables.py:430
 msgid "3"
 msgstr "3"
 
-#: .\backend\static_variables.py:430
+#: backend/static_variables.py:431
 msgid "4"
 msgstr "4"
 
-#: .\backend\static_variables.py:431
+#: backend/static_variables.py:432
 msgid "5 and more"
 msgstr "5 et plus"
 
-#: .\backend\static_variables.py:438
+#: backend/static_variables.py:439
 msgid "3 and more"
 msgstr "3 et plus"
 
-#: .\backend\static_variables.py:442
+#: backend/static_variables.py:443
 msgid "Select construction age"
 msgstr "Choisir l'âge du construction"
 
-#: .\backend\static_variables.py:443
+#: backend/static_variables.py:444
 msgid "Newly built"
 msgstr "Récemment construit"
 
-#: .\backend\static_variables.py:444
+#: backend/static_variables.py:445
 msgid "10 years and less"
 msgstr "Moins de 10 ans"
 
-#: .\backend\static_variables.py:445
+#: backend/static_variables.py:446
 msgid "More than 10 years"
 msgstr "10 ans et plus"
 
-#: .\backend\static_variables.py:449
+#: backend/static_variables.py:450
 msgid "For sale"
 msgstr "À vendre"
 
-#: .\backend\static_variables.py:450
+#: backend/static_variables.py:451
 msgid "For rent"
 msgstr "À louer"
 
-#: .\backend\static_variables.py:451
+#: backend/static_variables.py:452
 msgid "Sold"
 msgstr "Vendue"
 
-#: .\backend\static_variables.py:455
+#: backend/static_variables.py:456
 msgid "Not specified"
 msgstr "Non spécifié"
 
-#: .\backend\static_variables.py:456
+#: backend/static_variables.py:457
 msgid "Less than 200 000$"
 msgstr "Moins de 200 000$"
 
-#: .\backend\static_variables.py:457
+#: backend/static_variables.py:458
 msgid "200 000$ - 300 000$"
 msgstr "200 000$ - 300 000$"
 
-#: .\backend\static_variables.py:458
+#: backend/static_variables.py:459
 msgid "300 000$ - 400 000$"
 msgstr "300 000$ - 400 000$"
 
-#: .\backend\static_variables.py:459
+#: backend/static_variables.py:460
 msgid "400 000$ - 500 000$"
 msgstr "400 000$ - 500 000$"
 
-#: .\backend\static_variables.py:460
+#: backend/static_variables.py:461
 msgid "More than 500 000$"
 msgstr "Plus de 500 000$"
 
-#: .\contact\models.py:14 .\contact\models.py:60 .\funding\models.py:32
-#: .\item\models.py:69 .\testimonial\models.py:20
-msgid "Created at"
-msgstr "Créé le"
+#: backend/static_variables.py:488
+msgid "Autre"
+msgstr ""
 
-#: .\contact\models.py:16 .\contact\models.py:17 .\contact\models.py:62
-#: .\contact\models.py:68 .\funding\models.py:34 .\newsletter\models.py:13
-#: .\newsletter\models.py:15 .\testimonial\models.py:21
-msgid "First name"
-msgstr "First name"
+#: backend/static_variables.py:489
+msgid "Achteur"
+msgstr ""
 
-#: .\contact\models.py:18 .\contact\templates\contact\contact_template.html:44
+#: backend/static_variables.py:490
+msgid "Vendeur"
+msgstr ""
+
+#: backend/static_variables.py:491
+msgid "Locataire"
+msgstr ""
+
+#: client/admin.py:33 settings_db/admin.py:61
+msgid "Paramètres générals"
+msgstr ""
+
+#: client/admin.py:38
+msgid "E-mail de rappel de paiement"
+msgstr ""
+
+#: client/models.py:21
+msgid "Nom du groupe"
+msgstr ""
+
+#: client/models.py:22 client/models.py:89 item/models.py:102
+#: newsletter/models.py:13 sociallink/models.py:22
+#, fuzzy
+#| msgid "Is active"
+msgid "Est active"
+msgstr "Est active"
+
+#: client/models.py:24
+msgid "1ere line du footer de l'email"
+msgstr ""
+
+#: client/models.py:27
+msgid "2eme line du footer de l'email"
+msgstr ""
+
+#: client/models.py:30
+msgid "Paragraphe 1 de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:36
+msgid "Paragraphe 2 de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:42
+msgid "Paragraphe 3 de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:46
+msgid "Sujet de l'email de rappel de paiment"
+msgstr ""
+
+#: client/models.py:58
+msgid "Rappelle: Paiement du loyer"
+msgstr ""
+
+#: client/models.py:59
+msgid ""
+"Veuillez payer votre loyer le 1er du mois. Si vous payer par Interac, "
+"veuillez utiliser le courriel suivant: Jalil.elmahboubi@gmail.com"
+msgstr ""
+
+#: client/models.py:61
+msgid ""
+"Une pénalité de 25.00$ sera ajouter après le 5 de chaque mois. \r\n"
+" Une pénalité de 125$ et demande de résiliation de votre bail si le retard "
+"dépasse 3 semaines."
+msgstr ""
+
+#: client/models.py:64
+msgid "Cordialement,"
+msgstr ""
+
+#: client/models.py:65
+msgid "Jalil ELMAHBOUBI"
+msgstr ""
+
+#: client/models.py:84
+#, fuzzy
+#| msgid "Apartment"
+msgid "Appartement"
+msgstr "Appartement"
+
+#: client/models.py:85 contact/models.py:14 contact/models.py:60
+#: contact/models.py:135 funding/models.py:20 testimonial/models.py:21
+msgid "Créé le"
+msgstr ""
+
+#: client/models.py:87 contact/models.py:16 contact/models.py:62
+#: contact/models.py:137 newsletter/models.py:12 testimonial/models.py:22
+msgid "Prénom"
+msgstr ""
+
+#: client/models.py:90 contact/models.py:17 contact/models.py:69
+#: contact/models.py:144 newsletter/models.py:14 testimonial/models.py:30
+msgid "Nom"
+msgstr ""
+
+#: client/models.py:92 newsletter/models.py:15
+msgid "Type"
+msgstr ""
+
+#: client/models.py:103
+msgid "Enter a valid year and month."
+msgstr ""
+
+#: client/templates/client/payment_reminder_email.html:7
+msgid "Bonjour,"
+msgstr ""
+
+#: contact/models.py:18 contact/templates/contact/contact_template.html:44
 msgid "Message"
 msgstr "Message"
 
-#: .\contact\models.py:19
-msgid "Subject"
-msgstr "Sujet"
+#: contact/models.py:19
+msgid "Sujet"
+msgstr ""
 
-#: .\contact\models.py:20 .\contact\models.py:73
-#: .\contact\templates\contact\contact_buying_template.html:28
-#: .\contact\templates\contact\contact_template.html:29
-msgid "Phone"
-msgstr "Téléphone"
+#: contact/models.py:28 contact/models.py:103 item/models.py:29
+msgid "Nombre de salles de bain"
+msgstr ""
 
-#: .\contact\models.py:28 .\contact\views.py:74 .\item\models.py:28
-msgid "Bathrooms number"
-msgstr "Nombre de salles de bain"
+#: contact/models.py:35 contact/models.py:110 item/models.py:36
+msgid "Nombre de chambres"
+msgstr ""
 
-#: .\contact\models.py:35 .\contact\views.py:75 .\item\models.py:35
-msgid "Bedrooms number"
-msgstr "Nombre de chambres"
+#: contact/models.py:42 contact/models.py:117 item/models.py:43
+msgid "Type de bâtiment"
+msgstr ""
 
-#: .\contact\models.py:42 .\contact\views.py:76 .\item\models.py:42
-msgid "Building type"
-msgstr "Type de bâtiment"
+#: contact/models.py:48 contact/models.py:123 item/models.py:60
+msgid "Ville"
+msgstr ""
 
-#: .\contact\models.py:48 .\contact\views.py:77 .\funding\models.py:25
-#: .\item\models.py:52 .\testimonial\models.py:13
-msgid "City"
-msgstr "Ville"
+#: contact/models.py:54 contact/models.py:129 item/models.py:68
+#, fuzzy
+#| msgid "Select construction age"
+msgid "L'âge du construction"
+msgstr "Choisir l'âge du construction"
 
-#: .\contact\models.py:54 .\contact\views.py:78 .\item\models.py:60
-msgid "Construction age"
-msgstr "Âge de construction"
+#: contact/models.py:63 contact/models.py:138 item/models.py:90
+msgid "Salle à manger"
+msgstr ""
 
-#: .\contact\models.py:63 .\contact\views.py:79 .\item\models.py:82
-msgid "Dining room"
-msgstr "Salle à manger"
+#: contact/models.py:64 contact/models.py:139 item/models.py:91
+msgid "Cheminée"
+msgstr ""
 
-#: .\contact\models.py:64 .\contact\views.py:80 .\item\models.py:83
-msgid "Fireplace"
-msgstr "Cheminée"
-
-#: .\contact\models.py:65 .\contact\views.py:81 .\item\models.py:84
+#: contact/models.py:65 contact/models.py:140 contact/views.py:101
+#: contact/views.py:171 item/models.py:92
 msgid "Garage"
 msgstr "Garage"
 
-#: .\contact\models.py:66 .\contact\views.py:82 .\item\models.py:85
-msgid "Garden"
-msgstr "Jardin"
+#: contact/models.py:66 contact/models.py:141 item/models.py:93
+msgid "Jardin"
+msgstr ""
 
-#: .\contact\models.py:67 .\contact\views.py:92 .\item\models.py:86
-msgid "Swimming pool"
-msgstr "Piscine"
+#: contact/models.py:67 contact/models.py:142 item/models.py:94
+msgid "Piscine"
+msgstr ""
 
-#: .\contact\models.py:69
-msgid "Property size min(m²)"
-msgstr "Taille de la propriété min (m²)"
+#: contact/models.py:68 contact/models.py:143
+msgid "A été traité"
+msgstr ""
 
-#: .\contact\models.py:70
-msgid "Property size max(m²)"
-msgstr "Taille de la propriété max (m²)"
+#: contact/models.py:70 contact/models.py:145
+msgid "Taille minimale de la propriété(m²)"
+msgstr ""
 
-#: .\contact\models.py:71 .\contact\views.py:89
-msgid "Occupation date"
-msgstr "Date d'occupation"
+#: contact/models.py:71
+msgid "Taille maximale de la propriété max(m²)"
+msgstr ""
 
-#: .\contact\models.py:72 .\contact\views.py:90
-msgid "Other characteristics"
+#: contact/models.py:72 contact/models.py:147
+msgid "Date d'occupation"
+msgstr ""
+
+#: contact/models.py:73 contact/models.py:148
+#, fuzzy
+#| msgid "Other characteristics"
+msgid "Autres caractéristiques"
 msgstr "Autres caractéristiques"
 
-#: .\contact\models.py:75 .\contact\views.py:87
-msgid "Price range"
-msgstr "Intervalle"
+#: contact/models.py:76 contact/models.py:151
+msgid "Intervalle de prix"
+msgstr ""
 
-#: .\contact\models.py:82 .\contact\views.py:88 .\item\models.py:110
-msgid "Property type"
-msgstr "Type de la Propriété"
+#: contact/models.py:83 contact/models.py:158 item/models.py:118
+msgid "Type de la Propriété"
+msgstr ""
 
-#: .\contact\models.py:89 .\contact\views.py:91 .\item\models.py:119
-msgid "Status"
+#: contact/models.py:90 contact/models.py:165 item/models.py:127
+#, fuzzy
+#| msgid "Status"
+msgid "Statut"
 msgstr "Statut"
 
-#: .\contact\templates\contact\contact_buying_template.html:6
+#: contact/models.py:146
+msgid "Taille maximale de la propriété(m²)"
+msgstr ""
+
+#: contact/templates/contact/contact_buying_template.html:6
 msgid "Buying a property!"
 msgstr "Acheter une propriété!"
 
-#: .\contact\templates\contact\contact_renting_template.html:6
-msgid "Renting a property!"
-msgstr "Louer une propriété!"
-
-#: .\contact\templates\contact\contact_buying_template.html:14
-#: .\contact\templates\contact\contact_template.html:15
+#: contact/templates/contact/contact_buying_template.html:14
+#: contact/templates/contact/contact_renting_template.html:14
+#: contact/templates/contact/contact_template.html:15
 msgid "Client information"
 msgstr "Information du client"
 
-#: .\contact\templates\contact\contact_buying_template.html:19
-#: .\contact\templates\contact\contact_template.html:20 .\funding\models.py:13
-#: .\funding\templates\funding\funding_admin_template.html:19
-#: .\funding\templates\funding\funding_bank_template.html:19
+#: contact/templates/contact/contact_buying_template.html:19
+#: contact/templates/contact/contact_renting_template.html:19
+#: contact/templates/contact/contact_template.html:20
+#: funding/templates/funding/funding_admin_template.html:19
+#: funding/templates/funding/funding_bank_template.html:19
 msgid "Name"
 msgstr "Nom"
 
-#: .\contact\templates\contact\contact_buying_template.html:43
+#: contact/templates/contact/contact_buying_template.html:28
+#: contact/templates/contact/contact_renting_template.html:28
+#: contact/templates/contact/contact_template.html:29
+msgid "Phone"
+msgstr "Téléphone"
+
+#: contact/templates/contact/contact_buying_template.html:43
+#: contact/templates/contact/contact_renting_template.html:43
 msgid "Property information"
 msgstr "Information de la propriété"
 
-#: .\contact\templates\contact\contact_template.html:7
+#: contact/templates/contact/contact_renting_template.html:6
+msgid "Renting a property!"
+msgstr "Louer une propriété!"
+
+#: contact/templates/contact/contact_template.html:7
 msgid "Client contact"
 msgstr "Contact du client"
 
-#: .\contact\templates\contact\contact_template.html:57
+#: contact/templates/contact/contact_template.html:57
 msgid "The client needs more information about this property"
 msgstr "Le client a besoin de plus d'informations sur cette propriété"
 
-#: .\contact\views.py:83
+#: contact/views.py:91 contact/views.py:161
+msgid "Bathrooms number"
+msgstr "Nombre de salles de bain"
+
+#: contact/views.py:93 contact/views.py:163
+msgid "Bedrooms number"
+msgstr "Nombre de chambres"
+
+#: contact/views.py:95 contact/views.py:165
+msgid "Building type"
+msgstr "Type de bâtiment"
+
+#: contact/views.py:96 contact/views.py:166 testimonial/models.py:14
+msgid "City"
+msgstr "Ville"
+
+#: contact/views.py:97 contact/views.py:167
+msgid "Construction age"
+msgstr "Âge de construction"
+
+#: contact/views.py:99 contact/views.py:169
+msgid "Dining room"
+msgstr "Salle à manger"
+
+#: contact/views.py:100 contact/views.py:170
+msgid "Fireplace"
+msgstr "Cheminée"
+
+#: contact/views.py:102 contact/views.py:172
+msgid "Garden"
+msgstr "Jardin"
+
+#: contact/views.py:103 contact/views.py:173
 msgid "Property size max"
 msgstr "Taille de la propriété max"
 
-#: .\contact\views.py:85
+#: contact/views.py:105 contact/views.py:175
 msgid "Property size min"
 msgstr "Taille de la propriété min"
 
-#: .\contact\views.py:102
+#: contact/views.py:107 contact/views.py:177
+msgid "Price range"
+msgstr "Intervalle"
+
+#: contact/views.py:108 contact/views.py:178
+msgid "Property type"
+msgstr "Type de la Propriété"
+
+#: contact/views.py:109 contact/views.py:179
+msgid "Occupation date"
+msgstr "Date d'occupation"
+
+#: contact/views.py:110 contact/views.py:180
+msgid "Other characteristics"
+msgstr "Autres caractéristiques"
+
+#: contact/views.py:111 contact/views.py:181
+msgid "Status"
+msgstr "Statut"
+
+#: contact/views.py:112 contact/views.py:182
+msgid "Swimming pool"
+msgstr "Piscine"
+
+#: contact/views.py:122
 msgid "Buying property"
 msgstr "Achat de propriété"
 
-#: .\contact\views.py:102
+#: contact/views.py:192
 msgid "Renting property"
 msgstr "Location de propriété"
 
-#: .\funding\models.py:33 .\item\models.py:70
-msgid "Description"
-msgstr "Description"
+#: funding/models.py:15
+msgid "Logo de la banque."
+msgstr ""
 
-#: .\funding\models.py:36 .\testimonial\models.py:23
-msgid "User's image."
-msgstr "L'image de l'utilisateur."
+#: funding/models.py:19
+msgid "Nom de la banque"
+msgstr ""
 
-#: .\funding\models.py:40 .\testimonial\models.py:27
-msgid "Initials background color"
-msgstr "Couleur de fond des initiales"
+#: funding/models.py:21
+msgid "Étiquette du champ libre"
+msgstr ""
 
-#: .\funding\models.py:41 .\testimonial\models.py:28
-msgid "Initials color"
-msgstr "Couleur des initiales"
+#: funding/models.py:22
+msgid "Valeur du champ libre"
+msgstr ""
 
-#: .\funding\models.py:42 .\testimonial\models.py:29
-msgid "Last name"
-msgstr "Prénom"
-
-#: .\funding\templates\funding\funding_admin_template.html:6
-#: .\funding\templates\funding\funding_bank_template.html:6
+#: funding/templates/funding/funding_admin_template.html:6
+#: funding/templates/funding/funding_bank_template.html:6
 msgid "Client funding!"
 msgstr "Financement du client!"
 
-#: .\funding\views.py:36
-msgid "Client funding email"
+#: item/admin.py:52
+msgid "Informations générales"
 msgstr ""
 
-#: .\funding\views.py:62
-msgid "An error has occurred. Check your connection."
-msgstr "Une erreur est survenue. Vérifiez votre connexion."
-
-#: .\item\admin.py:55
-msgid "Characteristics"
+#: item/admin.py:55
+#, fuzzy
+#| msgid "Characteristics"
+msgid "Caractéristiques"
 msgstr "Caractéristiques"
 
-#: .\item\admin.py:64
-msgid "Added fields"
-msgstr "Champs ajoutés"
-
-#: .\item\models.py:16
-msgid "Added field 1 label"
-msgstr "Étiquette du 1er champ ajouté"
-
-#: .\item\models.py:17
-msgid "Added field 1 value"
-msgstr "Valeur du 1er champ ajouté"
-
-#: .\item\models.py:18
-msgid "Added field 2 label"
-msgstr "Étiquette du 2eme champ ajouté"
-
-#: .\item\models.py:19
-msgid "Added field 2 value"
-msgstr "Valeur du 2eme champ ajouté"
-
-#: .\item\models.py:20
-msgid "Added field 3 label"
-msgstr "Étiquette du 3eme champ ajouté"
-
-#: .\item\models.py:21
-msgid "Added field 3 value"
-msgstr "Valeur du 3eme champ ajouté"
-
-#: .\item\models.py:24
-msgid "Annual incomes ($)"
-msgstr "Revenus annuels ($)"
-
-#: .\item\models.py:26
-msgid "Apartments number"
-msgstr "Nombre d'appartements"
-
-#: .\item\models.py:49
-msgid "Ccd (CCD)"
+#: item/admin.py:62
+msgid "Caractéristiques économiques"
 msgstr ""
 
-#: .\item\models.py:67
-msgid "Cost per housing (CPH) ($)"
+#: item/admin.py:68
+msgid "Champs ajoutés"
+msgstr ""
+
+#: item/admin.py:74
+#, fuzzy
+#| msgid "Occupation date"
+msgid "Options de carte"
+msgstr "Date d'occupation"
+
+#: item/models.py:17
+msgid "Étiquette du 1er champ ajouté"
+msgstr ""
+
+#: item/models.py:18 item/models.py:20 item/models.py:22
+msgid "Valeur du 1er champ ajouté"
+msgstr ""
+
+#: item/models.py:19
+msgid "Étiquette du 2eme champ ajouté"
+msgstr ""
+
+#: item/models.py:21
+msgid "Étiquette du 3eme champ ajouté"
+msgstr ""
+
+#: item/models.py:25
+msgid "Revenus annuels ($)"
+msgstr ""
+
+#: item/models.py:27
+msgid "Nombre d'appartements"
+msgstr ""
+
+#: item/models.py:50
+#, fuzzy
+#| msgid "Description"
+msgid "Description détaillée"
+msgstr "Description"
+
+#: item/models.py:52
+msgid "Description détaillée en pdf"
+msgstr ""
+
+#: item/models.py:57
+msgid "CCD"
+msgstr ""
+
+#: item/models.py:75
+#, fuzzy
+#| msgid "Cost per housing (CPH) ($)"
+msgid "Coût par logement (CPL) ($)"
 msgstr "Coût par logement (CPL) ($)"
 
-#: .\item\models.py:72
-msgid "Minimum down payment ($)"
-msgstr "Mise de fond minimal ($)"
+#: item/models.py:77
+msgid "Created at"
+msgstr "Créé le"
 
-#: .\item\models.py:75
-msgid "Economic value ($)"
+#: item/models.py:78
+msgid "Description"
+msgstr "Description"
+
+#: item/models.py:80
+msgid "Mise de fond minimal ($)"
+msgstr ""
+
+#: item/models.py:83
+#, fuzzy
+#| msgid "Economic value ($)"
+msgid "Valeur économique ($)"
 msgstr "Valeur économique ($)"
 
-#: .\item\models.py:77
+#: item/models.py:85
 msgid "Latitude"
 msgstr "Latitude"
 
-#: .\item\models.py:78
+#: item/models.py:86
 msgid "Longitude"
 msgstr "Longitude"
 
-#: .\item\models.py:80
-msgid "Gross revenue multiplier (GRM)"
-msgstr "Multiplicateur de revenu brut (MRB)"
+#: item/models.py:88
+msgid "Multiplicateur de revenu brut (MRB)"
+msgstr ""
 
-#: .\item\models.py:87
-msgid "Housing descriptions"
-msgstr "Description des logements"
+#: item/models.py:95
+#, fuzzy
+#| msgid "Description"
+msgid "Description des logements"
+msgstr "Description"
 
-#: .\item\models.py:89
-msgid "Item's map's image."
-msgstr "L'image de la carte de la propriété."
+#: item/models.py:97
+msgid "L'image de la carte de la propriété."
+msgstr ""
 
-#: .\item\models.py:93
+#: item/models.py:101 item/models.py:178
 msgid "Id"
 msgstr "Id"
 
-#: .\item\models.py:94 .\newsletter\models.py:14 .\sociallink\models.py:22
-msgid "Is active"
-msgstr "Est active"
+#: item/models.py:103 sociallink/models.py:23 usefullinks/models.py:10
+#: usefullinks/models.py:20
+msgid "Étiquette"
+msgstr ""
 
-#: .\item\models.py:95 .\sociallink\models.py:23 .\usefullinks\models.py:10
-#: .\usefullinks\models.py:20
-msgid "Label"
-msgstr "Étiquette"
+#: item/models.py:104
+msgid "Taille de la propriété(m²)"
+msgstr ""
 
-#: .\item\models.py:96
-msgid "Property size(m²)"
-msgstr "Taille de la propriété(m²)"
+#: item/models.py:106
+msgid "Prêt maximal ($)"
+msgstr ""
 
-#: .\item\models.py:98
-msgid "Maximum loan (%)"
-msgstr "Prêt maximal (%)"
+#: item/models.py:109
+msgid "Multiplicateur de revenu net (MRN)"
+msgstr ""
 
-#: .\item\models.py:101
-msgid "Net income multiplier (NIM)"
-msgstr "Multiplicateur de revenu net (MRN)"
+#: item/models.py:112
+msgid "Taux global d'actualisation (TGA) (%)"
+msgstr ""
 
-#: .\item\models.py:104
-msgid "Overall rate of update (ORU) (%)"
-msgstr "Taux global d'actualisation (TGA)"
+#: item/models.py:115
+msgid "Prix"
+msgstr ""
 
-#: .\item\models.py:107
-msgid "Price"
-msgstr "Prix"
-
-#: .\item\models.py:117
-msgid "Short description"
+#: item/models.py:125
+#, fuzzy
+#| msgid "Short description"
+msgid "Brèf description"
 msgstr "Brèf description"
 
-#: .\item\models.py:124
-msgid "With map"
-msgstr "Avec Carte"
+#: item/models.py:132
+msgid "Avec Carte"
+msgstr ""
 
-#: .\item\models.py:140 .\item\models.py:146
-msgid "Item's image."
-msgstr "Image de l'article."
+#: item/models.py:155
+msgid "Image de l'article."
+msgstr ""
 
-#: .\item\templates\item\email_template.html:55
-#: .\item\templates\item\email_template.html:57
+#: item/models.py:161
+msgid "L'article."
+msgstr ""
+
+#: item/templates/item/email_template.html:55
+#: item/templates/item/email_template.html:57
 msgid "Not interested to our messages?"
 msgstr "Pas intéressé par nos messages?"
 
-#: .\item\templates\item\email_template.html:55
-#: .\item\templates\item\email_template.html:57
+#: item/templates/item/email_template.html:55
+#: item/templates/item/email_template.html:57
 msgid "Unsubscribe"
 msgstr "Se désabonner"
 
-#: .\item\templates\item\new_item_template.html:8
-msgid "A new property has been added!"
+#: item/templates/item/new_item_template.html:8
+#, fuzzy
+#| msgid "A property has been modified!"
+msgid "A property has been updated!"
 msgstr "Une propriété a été mise à jour!"
 
-#: .\item\templates\item\new_item_template.html:10
+#: item/templates/item/new_item_template.html:10
 msgid "A new property has been added!"
 msgstr "Une nouvelle propriété a été ajoutée!"
 
-#: .\item\templates\item\new_item_template.html:43
+#: item/templates/item/new_item_template.html:47
 msgid "More infos..."
 msgstr "Plus d'informations..."
 
-#: .\item\views.py:156
-msgid "New property"
-msgstr "Nouvelle propriété"
+#: item/views.py:160
+#, fuzzy
+#| msgid "A property has been modified!"
+msgid "A property has been updated"
+msgstr "Une propriété a été mise à jour!"
 
-#: .\item\views.py:156
-msgid "Une propriété a été mise à jour"
-msgstr ""
-
-#: .\newsletter\templates\newsletter\resubscription_template.html:7
+#: newsletter/templates/newsletter/resubscription_template.html:7
 msgid "Resubscribing to the newsletter"
 msgstr "Réinscrire à la newsletter"
 
-#: .\newsletter\templates\newsletter\resubscription_template.html:12
-#: .\newsletter\templates\newsletter\subscription_template.html:12
-#: .\newsletter\templates\newsletter\unsubscription_template.html:12
+#: newsletter/templates/newsletter/resubscription_template.html:12
+#: newsletter/templates/newsletter/subscription_template.html:12
+#: newsletter/templates/newsletter/unsubscription_template.html:12
 msgid "Dear"
 msgstr "Chère"
 
-#: .\newsletter\templates\newsletter\resubscription_template.html:17
+#: newsletter/templates/newsletter/resubscription_template.html:17
 msgid "Thanks for resubscribing to our newsletter."
 msgstr "Merci de vous être réinscrit à notre newsletter."
 
-#: .\newsletter\templates\newsletter\resubscription_template.html:22
-#: .\newsletter\templates\newsletter\subscription_template.html:22
+#: newsletter/templates/newsletter/resubscription_template.html:22
+#: newsletter/templates/newsletter/subscription_template.html:22
 msgid "Visit:"
 msgstr "Visitez:"
 
-#: .\newsletter\templates\newsletter\subscription_template.html:7
+#: newsletter/templates/newsletter/subscription_template.html:7
 msgid "Subscribing to the newsletter"
 msgstr "S'abonner à la newsletter"
 
-#: .\newsletter\templates\newsletter\subscription_template.html:17
+#: newsletter/templates/newsletter/subscription_template.html:17
 msgid "Thanks for subscribing to our newsletter."
 msgstr "Merci de vous être abonné à notre newsletter."
 
-#: .\newsletter\templates\newsletter\unsubscription_template.html:7
+#: newsletter/templates/newsletter/unsubscription_template.html:7
 msgid "Unsubscribing to the newsletter"
 msgstr "Se désabonner à la newsletter"
 
-#: .\newsletter\templates\newsletter\unsubscription_template.html:17
+#: newsletter/templates/newsletter/unsubscription_template.html:17
 msgid "We'll miss you!"
 msgstr "Vous nous manquerez!"
 
-#: .\newsletter\templates\newsletter\unsubscription_template.html:22
+#: newsletter/templates/newsletter/unsubscription_template.html:22
 msgid ""
 "You recently canceled your subscription in our newsletter and we're sorry to "
 "see you go. Thank you for being with us. There could be various reasons for "
@@ -696,181 +905,378 @@ msgstr ""
 "votre départ peuvent être diverses et nous espérons vraiment que vous "
 "pourrez nous aider à apprendre et à nous améliorer."
 
-#: .\newsletter\templates\newsletter\unsubscription_template.html:27
+#: newsletter/templates/newsletter/unsubscription_template.html:27
 msgid "You canceled your subscription by mistake?"
 msgstr "Vous avez annulé votre abonnement par erreur?"
 
-#: .\newsletter\templates\newsletter\unsubscription_template.html:27
+#: newsletter/templates/newsletter/unsubscription_template.html:27
 msgid "Re-subscribe from here"
 msgstr "Ré-abonnez-vous d'ici"
 
-#: .\newsletter\views.py:77
+#: newsletter/views.py:77
 msgid "Subscription to the newsletter"
 msgstr "Abonnement à la newsletter"
 
-#: .\newsletter\views.py:105 .\newsletter\views.py:154
+#: newsletter/views.py:105 newsletter/views.py:154
 msgid "Sorry, you haven't any subscription in our newsletter!"
 msgstr "Désolé, vous n'êtes pas inscrit à notre newsletter!"
 
-#: .\newsletter\views.py:128
+#: newsletter/views.py:128
 msgid "Unsubscription from the newsletter"
 msgstr "Désinscription à la newsletter"
 
-#: .\newsletter\views.py:133
+#: newsletter/views.py:133
 msgid "Your subscription is deactivated!"
 msgstr "Votre abonnement est désactivé!"
 
-#: .\newsletter\views.py:138
+#: newsletter/views.py:138
 msgid "Your subscription is already deactivated!"
 msgstr "Votre abonnement est déjà désactivé!"
 
-#: .\newsletter\views.py:184
+#: newsletter/views.py:184
 msgid "Resubscription to the newsletter"
 msgstr "Réinscription à la newsletter"
 
-#: .\newsletter\views.py:189
+#: newsletter/views.py:189
 msgid "Your subscription is reactivated!"
 msgstr "Votre abonnement est réactivé!"
 
-#: .\newsletter\views.py:194
+#: newsletter/views.py:194
 msgid "Your subscription is already activated!"
 msgstr "Votre abonnement est déjà activé!"
 
-#: .\settings_db\admin.py:34 .\settings_db\admin.py:42
-msgid "Header Bg Image Preview"
-msgstr "Aperçu de l'image d'arrière plan d'en-tête"
+#: settings_db/admin.py:38 settings_db/admin.py:42
+msgid "Preview de l'image du background de l'entete"
+msgstr ""
 
-#: .\settings_db\admin.py:38
-msgid "Header Background Image Preview"
-msgstr "Aperçu de l'image d'arrière plan d'en-tête"
+#: settings_db/admin.py:46
+msgid "Preview de l'image principale du background de l'entete"
+msgstr ""
 
-#: .\settings_db\admin.py:46
-msgid "Logo Image Preview"
-msgstr "Aperçu de l'image du logo"
+#: settings_db/admin.py:50
+msgid "Preview du l'image du logo"
+msgstr ""
 
-#: .\settings_db\admin.py:57
-msgid "Global settings"
-msgstr "Paramètres globaux"
+#: settings_db/admin.py:64
+msgid "Paramètres de l'entete"
+msgstr ""
 
-#: .\settings_db\admin.py:60
-msgid "Header settings"
-msgstr "Paramètres d'en-tête"
+#: settings_db/admin.py:70
+msgid "Paramètres de la page d'accueil"
+msgstr ""
 
-#: .\settings_db\admin.py:63
-msgid "Home page settings"
-msgstr "Paramètres de la page d'accueil"
+#: settings_db/models.py:16
+msgid "Image d'en-tête"
+msgstr ""
 
-#: .\settings_db\models.py:16
-msgid "Header image"
-msgstr "Image d'en-tête"
+#: settings_db/models.py:22
+msgid "Image d'arrière-plan de l'en-tête"
+msgstr ""
 
-#: .\settings_db\models.py:22
-msgid "Header background image"
-msgstr "Image de fond d'en-tête"
+#: settings_db/models.py:26
+msgid "Couleur du texte de l'en-tête"
+msgstr ""
 
-#: .\settings_db\models.py:26
-msgid "Header text color"
-msgstr "Couleur du texte de l'en-tête"
+#: settings_db/models.py:28
+msgid "Image logo"
+msgstr ""
 
-#: .\settings_db\models.py:27
-msgid "Logo image"
-msgstr "Image du logo"
+#: settings_db/models.py:32
+msgid "Image d'arrière-plan du body"
+msgstr ""
 
-#: .\settings_db\models.py:30
-msgid "Body background image"
-msgstr "Image de fond du corps"
+#: settings_db/models.py:36
+msgid "Nom du site"
+msgstr ""
 
-#: .\settings_db\models.py:34
-msgid "Site name"
-msgstr "Site name"
+#: settings_db/models.py:38
+msgid "1er ligne du titre"
+msgstr ""
 
-#: .\settings_db\models.py:36
-msgid "Title line 1"
-msgstr "1er ligne du titre"
+#: settings_db/models.py:39
+msgid "2eme ligne du titre"
+msgstr ""
 
-#: .\settings_db\models.py:37
-msgid "Title line 2"
-msgstr "2eme ligne du titre"
+#: settings_db/models.py:41
+msgid "Titre de la première partie"
+msgstr ""
 
-#: .\settings_db\models.py:39
-msgid "Row 1 title"
-msgstr "Titre de la première partie"
+#: settings_db/models.py:42
+msgid "1er paragraphe de la première partie"
+msgstr ""
 
-#: .\settings_db\models.py:40
-msgid "Row 1 paragraph 1"
-msgstr "1er paragraphe de la première partie"
+#: settings_db/models.py:43
+msgid "2eme paragraphe de la première partie"
+msgstr ""
 
-#: .\settings_db\models.py:41
-msgid "Row 1 paragraph 2"
-msgstr "2eme paragraphe de la première partie"
+#: settings_db/models.py:44
+msgid "3eme paragraphe de la première partie"
+msgstr ""
 
-#: .\settings_db\models.py:42
-msgid "Row 1 paragraph 3"
-msgstr "3eme paragraphe de la première partie"
+#: settings_db/models.py:46
+msgid "Titre de la deuxième partie"
+msgstr ""
 
-#: .\settings_db\models.py:44
-msgid "Row 2 title"
-msgstr "Titre de la deuxième partie"
+#: settings_db/models.py:47
+msgid "1er paragraphe de la deuxième partie"
+msgstr ""
 
-#: .\settings_db\models.py:45
-msgid "Row 2 paragraph 1"
-msgstr "1er paragraphe de la deuxième partie"
+#: settings_db/models.py:48
+msgid "2eme paragraphe de la deuxième partie"
+msgstr ""
 
-#: .\settings_db\models.py:46
-msgid "Row 2 paragraph 2"
-msgstr "2eme paragraphe de la deuxième partie"
+#: settings_db/models.py:49
+msgid "3eme paragraphe de la deuxième partie"
+msgstr ""
 
-#: .\settings_db\models.py:47
-msgid "Row 2 paragraph 3"
-msgstr "3eme paragraphe de la deuxième partie"
+#: settings_db/models.py:51
+msgid "Titre de la troisième partie"
+msgstr ""
 
-#: .\settings_db\models.py:49
-msgid "Row 3 title"
-msgstr "Titre de la troisième partie"
+#: settings_db/models.py:52
+msgid "1er paragraphe de la troisième partie"
+msgstr ""
 
-#: .\settings_db\models.py:50
-msgid "Row 3 paragraph 1"
-msgstr "1er paragraphe de la troisième partie"
+#: settings_db/models.py:53
+msgid "2eme paragraphe de la troisième partie"
+msgstr ""
 
-#: .\settings_db\models.py:51
-msgid "Row 3 paragraph 2"
-msgstr "2eme paragraphe de la troisième partie"
+#: settings_db/models.py:54
+msgid "3eme paragraphe de la troisième partie"
+msgstr ""
 
-#: .\settings_db\models.py:52
-msgid "Row 3 paragraph 3"
-msgstr "3eme paragraphe de la troisième partie"
-
-#: .\sociallink\models.py:21
+#: sociallink/models.py:21
 msgid "Fa icon"
 msgstr "Fa icon"
 
-#: .\sociallink\models.py:24 .\usefullinks\models.py:21
+#: sociallink/models.py:24 usefullinks/models.py:21
 msgid "Url"
 msgstr "Url"
 
-#: .\templates\admin\base_site.html:4
+#: templates/admin/base_site.html:4
 msgid "Django site admin"
 msgstr "Administrateur du site django"
 
-#: .\templates\admin\base_site.html:9
+#: templates/admin/base_site.html:9
 msgid "Django administration"
 msgstr "Administration du django"
 
-#: .\testimonial\models.py:30
-msgid "Testimonial"
-msgstr "Témoignage"
+#: testimonial/models.py:24
+msgid "L'image du témoin."
+msgstr ""
 
-#: .\usefullinks\models.py:25
-msgid "Link's category"
-msgstr "Catégorie du lien"
+#: testimonial/models.py:28
+msgid "Couleur de fond des initiales"
+msgstr ""
 
-#: .\usefullinks\views.py:24
+#: testimonial/models.py:29
+msgid "Couleur des initiales"
+msgstr ""
+
+#: testimonial/models.py:31
+msgid "Témoignage"
+msgstr ""
+
+#: usefullinks/models.py:25
+msgid "Catégorie du lien"
+msgstr ""
+
+#: usefullinks/views.py:24
 msgid "The Buyer's Guide (PDF)"
 msgstr "Le guide de l'acheteur (PDF)"
 
-#: .\usefullinks\views.py:28
+#: usefullinks/views.py:28
 msgid "The Seller's Guide (PDF)"
 msgstr "Le guide du vendeur (PDF)"
+
+#~ msgid "Royal Le page Triomphe"
+#~ msgstr "Royal Le page Triomphe"
+
+#~ msgid "Enable map"
+#~ msgstr "Activer la carte"
+
+#~ msgid "Full name"
+#~ msgstr "Nom complet"
+
+#~ msgid "Admin's image"
+#~ msgstr "L'image de l'administrateur"
+
+#~ msgid "First name"
+#~ msgstr "First name"
+
+#~ msgid "Subject"
+#~ msgstr "Sujet"
+
+#~ msgid "Property size min(m²)"
+#~ msgstr "Taille de la propriété min (m²)"
+
+#~ msgid "Property size max(m²)"
+#~ msgstr "Taille de la propriété max (m²)"
+
+#~ msgid "User's image."
+#~ msgstr "L'image de l'utilisateur."
+
+#~ msgid "Initials background color"
+#~ msgstr "Couleur de fond des initiales"
+
+#~ msgid "Initials color"
+#~ msgstr "Couleur des initiales"
+
+#~ msgid "Last name"
+#~ msgstr "Prénom"
+
+#~ msgid "An error has occurred. Check your connection."
+#~ msgstr "Une erreur est survenue. Vérifiez votre connexion."
+
+#~ msgid "Added fields"
+#~ msgstr "Champs ajoutés"
+
+#~ msgid "Added field 1 label"
+#~ msgstr "Étiquette du 1er champ ajouté"
+
+#~ msgid "Added field 1 value"
+#~ msgstr "Valeur du 1er champ ajouté"
+
+#~ msgid "Added field 2 label"
+#~ msgstr "Étiquette du 2eme champ ajouté"
+
+#~ msgid "Added field 2 value"
+#~ msgstr "Valeur du 2eme champ ajouté"
+
+#~ msgid "Added field 3 label"
+#~ msgstr "Étiquette du 3eme champ ajouté"
+
+#~ msgid "Added field 3 value"
+#~ msgstr "Valeur du 3eme champ ajouté"
+
+#~ msgid "Annual incomes ($)"
+#~ msgstr "Revenus annuels ($)"
+
+#~ msgid "Apartments number"
+#~ msgstr "Nombre d'appartements"
+
+#~ msgid "Minimum down payment ($)"
+#~ msgstr "Mise de fond minimal ($)"
+
+#~ msgid "Gross revenue multiplier (GRM)"
+#~ msgstr "Multiplicateur de revenu brut (MRB)"
+
+#~ msgid "Housing descriptions"
+#~ msgstr "Description des logements"
+
+#~ msgid "Item's map's image."
+#~ msgstr "L'image de la carte de la propriété."
+
+#~ msgid "Label"
+#~ msgstr "Étiquette"
+
+#~ msgid "Property size(m²)"
+#~ msgstr "Taille de la propriété(m²)"
+
+#~ msgid "Maximum loan (%)"
+#~ msgstr "Prêt maximal (%)"
+
+#~ msgid "Net income multiplier (NIM)"
+#~ msgstr "Multiplicateur de revenu net (MRN)"
+
+#~ msgid "Overall rate of update (ORU) (%)"
+#~ msgstr "Taux global d'actualisation (TGA)"
+
+#~ msgid "Price"
+#~ msgstr "Prix"
+
+#~ msgid "With map"
+#~ msgstr "Avec Carte"
+
+#~ msgid "Item's image."
+#~ msgstr "Image de l'article."
+
+#~ msgid "New property"
+#~ msgstr "Nouvelle propriété"
+
+#~ msgid "Header Bg Image Preview"
+#~ msgstr "Aperçu de l'image d'arrière plan d'en-tête"
+
+#~ msgid "Header Background Image Preview"
+#~ msgstr "Aperçu de l'image d'arrière plan d'en-tête"
+
+#~ msgid "Logo Image Preview"
+#~ msgstr "Aperçu de l'image du logo"
+
+#~ msgid "Global settings"
+#~ msgstr "Paramètres globaux"
+
+#~ msgid "Header settings"
+#~ msgstr "Paramètres d'en-tête"
+
+#~ msgid "Home page settings"
+#~ msgstr "Paramètres de la page d'accueil"
+
+#~ msgid "Header image"
+#~ msgstr "Image d'en-tête"
+
+#~ msgid "Header background image"
+#~ msgstr "Image de fond d'en-tête"
+
+#~ msgid "Header text color"
+#~ msgstr "Couleur du texte de l'en-tête"
+
+#~ msgid "Logo image"
+#~ msgstr "Image du logo"
+
+#~ msgid "Body background image"
+#~ msgstr "Image de fond du corps"
+
+#~ msgid "Site name"
+#~ msgstr "Site name"
+
+#~ msgid "Title line 1"
+#~ msgstr "1er ligne du titre"
+
+#~ msgid "Title line 2"
+#~ msgstr "2eme ligne du titre"
+
+#~ msgid "Row 1 title"
+#~ msgstr "Titre de la première partie"
+
+#~ msgid "Row 1 paragraph 1"
+#~ msgstr "1er paragraphe de la première partie"
+
+#~ msgid "Row 1 paragraph 2"
+#~ msgstr "2eme paragraphe de la première partie"
+
+#~ msgid "Row 1 paragraph 3"
+#~ msgstr "3eme paragraphe de la première partie"
+
+#~ msgid "Row 2 title"
+#~ msgstr "Titre de la deuxième partie"
+
+#~ msgid "Row 2 paragraph 1"
+#~ msgstr "1er paragraphe de la deuxième partie"
+
+#~ msgid "Row 2 paragraph 2"
+#~ msgstr "2eme paragraphe de la deuxième partie"
+
+#~ msgid "Row 2 paragraph 3"
+#~ msgstr "3eme paragraphe de la deuxième partie"
+
+#~ msgid "Row 3 title"
+#~ msgstr "Titre de la troisième partie"
+
+#~ msgid "Row 3 paragraph 1"
+#~ msgstr "1er paragraphe de la troisième partie"
+
+#~ msgid "Row 3 paragraph 2"
+#~ msgstr "2eme paragraphe de la troisième partie"
+
+#~ msgid "Row 3 paragraph 3"
+#~ msgstr "3eme paragraphe de la troisième partie"
+
+#~ msgid "Testimonial"
+#~ msgstr "Témoignage"
+
+#~ msgid "Link's category"
+#~ msgstr "Catégorie du lien"
 
 #, fuzzy
 #~| msgid "Item's image."
