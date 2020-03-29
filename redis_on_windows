@@ -1,0 +1,24 @@
+1. Install Vagrant on Windows
+    https://www.vagrantup.com/intro/getting-started/
+2. install Virtualbox
+    https://www.virtualbox.org/wiki/Downloads
+
+3. Download the vagrant-redis.zip vagrant configuration
+    https://raw.github.com/ServiceStack/redis-windows/master/downloads/vagrant-redis.zip
+    
+wget https://raw.github.com/ServiceStack/redis-windows/master/downloads/vagrant-redis.zip
+
+4. Extract vagrant-redis.zip in any folder, e.g. in c:\vagrant-redis
+5. replace config.vm.box_url in vagrantfile by:
+    config.vm.box_url = "https://vagrantcloud.com/hashicorp/boxes/precise64/versions/1.1.0/providers/virtualbox.box"
+5. Launch the Virtual Box VM with vagrant up
+
+cd c:\vagrant-redis
+vagrant up
+
+If not yet done:
+$ vagrant ssh
+$ sudo nano /etc/redis.conf
+and add this line at the end of file:
+    protected-mode no
+

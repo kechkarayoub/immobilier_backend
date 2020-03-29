@@ -1,0 +1,14 @@
+User info:
+    Name: {{first_name}} {{last_name}}
+    Email: {{email}}
+    {% if phone %}
+    Phone: {{phone}}
+    {% endif %}
+
+Message:
+    {{message}}
+
+
+{% if property_url %}
+    Property url: {{property_url}}
+{% endif %}

@@ -1,0 +1,11 @@
+{{site_name}}
+
+Dear {{first_name}} {{last_name}},
+
+Thank you!
+
+Thanks for subscribing to our newsletter.
+
+Visit {{site_url_root}}
+
+{{footer_text_content}}

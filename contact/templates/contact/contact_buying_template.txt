@@ -1,0 +1,13 @@
+User info:
+    Name: {{first_name}} {{last_name}}
+    Email: <span style="font-weight: bold;">{{email}}</span><br/>
+    {% if phone %}
+    Phone: <span style="font-weight: bold;">{{phone}}</span>
+    {% endif %}
+
+Property information:
+    {% for information in property_information %}
+    {% if information.1 %}
+    {{ information.0 }}: {{ information.1 }}.
+    {% endif %}
+    {% endfor %}

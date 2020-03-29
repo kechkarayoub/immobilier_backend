@@ -1,0 +1,43 @@
+{% extends 'item/email_template.html' %}
+{% load i18n %}
+
+{% block content %}
+<tr>
+    <td style="text-align: left; font-size:18px;">
+        {% trans "Bonjour," %}
+    </td>
+</tr>
+<tr>
+    <td style="text-align: justify; color: #000000; padding: 0 20px; padding-top: 60px;">
+        {{message_1|safe}}
+    </td>
+</tr>
+{% if not message_2 == "" %}
+<tr>
+    <td style="text-align: justify; color: #000000; padding: 0 20px; padding-top: 30px;">
+        {{message_2|safe}}
+    </td>
+</tr>
+{% endif %}
+{% if not message_3 == "" %}
+<tr>
+    <td style="text-align: justify; color: #000000; padding: 0 20px; padding-top: 30px;">
+        {{message_3|safe}}
+    </td>
+</tr>
+{% endif %}
+{% if not footer_1 == "" %}
+<tr>
+    <td style="text-align: justify; color: #000000; padding: 0 20px; padding-top: 60px;">
+        {{footer_1}}
+    </td>
+</tr>
+{% endif %}
+{% if not footer_2 == "" %}
+<tr>
+    <td style="text-align: justify; color: #000000; padding: 0 20px;">
+        {{footer_2}}
+    </td>
+</tr>
+{% endif %}
+{% endblock %}

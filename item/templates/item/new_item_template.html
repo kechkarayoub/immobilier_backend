@@ -1,0 +1,50 @@
+{% extends 'item/email_template.html' %}
+{% load i18n %}
+
+{% block content %}
+<tr>
+    <td style="text-align: center; font-size:18px; color: #a47355; padding-bottom: 25px;">
+        {% if is_updated %}
+            <b>{% trans "A property has been updated!" %}</b>
+        {% else %}
+            <b>{% trans "A new property has been added!" %}</b>
+        {% endif %}
+    </td>
+</tr>
+<table style="width: 100%;">
+    {% for property_image in property_images %}
+        {% if forloop.counter0 < 4 %}
+            {% if forloop.counter0|divisibleby:2 %}
+                <tr>
+            {% endif %}
+            <td style="text-align: center; width: 50%;">
+                <img src="cid:{{ property_image.image_filename }}" style="max-width: 425px; width: 100%; height: 340px;" />
+            </td>
+            {% if not forloop.counter0|divisibleby:2 %}
+                </tr>
+            {% endif %}
+        {% endif %}
+    {% empty %}
+    {% endfor %}
+</table>
+<tr>
+    <td style="text-align: center; font-size:18px; color: #a47355;">
+        <b>{{property_label}}</b>
+    </td>
+</tr>
+<tr>
+    <td style="text-align: justify; color: #848181; padding: 0 20px;">
+        {{property_short_description}}
+    </td>
+</tr>
+<tr>
+    <td style="text-align: justify; color: #848181; padding: 0 20px;">
+        {{property_description|truncatechars:300}}
+    </td>
+</tr>
+<tr>
+    <td style="text-align: center; padding-bottom: 25px;">
+        <a href="{{site_url_root}}/#/property/{{property_id}}"><button style="background-color: #d7b878; border-radius: 15px; border: 0; margin: 10px; padding: 5px 15px; cursor: pointer; cursor: pointer;">{% trans "More infos..." %}</button></a>
+    </td>
+</tr>
+{% endblock %}

@@ -1,0 +1,9 @@
+{{site_name}}
+
+Dear {{first_name}} {{last_name}},
+
+We'll miss you!
+
+You recently canceled your subscription in our newsletter and we're sorry to see you go. Thank you for being with us. There could be various reasons for leaving and we really hope you can help us learn and improve.
+
+You canceled your subscription by mistake? Resubscribe by clicking here: {{resubscribe_url}}

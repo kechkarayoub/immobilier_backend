@@ -1,0 +1,365 @@
+Creating ssk key on ubuntu:
+    $ ssh-keygen -t rsa (Enter file name & password)
+    $ ssh-copy-id username@ip_address (username: username of server; ex: root, ip_address: address ip of server; ex: 167.114.155.74)
+
+Connecting to the server on ubuntu:
+    $ ssh username@ip_address   (username: username of server; ex: root, ip_address: address ip of server; ex: 167.114.155.74)
+    (Enter server password)
+
+Add user on server:
+    $ adduser username (username is the name of the user; ex: ubuntu) (Enter password and data of user)
+Add created user to sudo group:
+    $ usermod -aG sudo username   (ex: ubuntu)
+
+
+Begin installation:
+    Connect with user if not already done:
+        $ su - username   (ex: ubuntu)
+
+    Update & upgrade:
+        $ sudo apt-get update && sudo apt upgrade -y
+        $ sudo apt autoremove
+    Clone backend code:
+        $ git clone https://github.com/kechkarayoub/ae_project_backend.git
+    Rename directory to backend:
+        $ mv ae_project_backend/ backend/  (ae_project_backend is the name of cloned directory)
+    Install python3 if not exists:
+        $ sudo apt install python3
+    Install pip3 if not exists:
+        $ sudo apt-get install python3-pip
+    Install virtualenv:
+        $ sudo pip3 install virtualenv
+        or:
+        
+        $ sudo apt-get install python-virtualenv
+    Create virtialenv for the application:
+        $ virtualenv venv (venv is the name of virtualenv)
+    Activate virtualenv:
+        $ source venv/bin/activate
+    Change directory to backend/:
+        $ cd backend/
+    Install requirements:
+        $ pip3 install -r requirements.txt
+    Install Mysql server or Mariadb:
+        Mysql:
+            $ sudo apt-get install mysql-server
+            Install Python-Mysql connector:
+            $ sudo apt-get install python-mysqldb
+        Maria:
+            $ sudo apt-get install python3-dev mariadb-server libmariadbclient-dev libssl-dev
+    Install Python3-dev:
+        $ sudo apt-get install python3-dev libmysqlclient-dev
+    Install Mysql-Client:
+        $ pip3 install pymysql
+    Install apache2:
+        $ sudo apt-get install python3-pip apache2 libapache2-mod-wsgi-py3
+    Configure apache:
+        Configure ports:
+            $ sudo nano /etc/apache2/ports.conf
+
+ports.conf content:
+# If you just change the port or add more ports here, you will likely also
+# have to change the VirtualHost statement in
+# /etc/apache2/sites-enabled/000-default.conf
+
+Listen 81
+
+<IfModule ssl_module>
+        Listen 443
+</IfModule>
+
+<IfModule mod_gnutls.c>
+        Listen 443
+</IfModule>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
+        Configure sites enabled:
+            $ sudo nano /etc/apache2/sites-available/000-default.conf
+
+000-default.conf content:
+<VirtualHost *:81>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /home/ubuntu/backend
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        Alias /static /home/ubuntu/backend/static
+        Alias /media /home/ubuntu/backend/media
+        <Directory /home/ubuntu/backend/static>
+                Require all granted
+        </Directory>
+        <Directory /home/ubuntu/backend/media>
+                Require all granted
+                Allow from all
+        </Directory>
+        <Directory /home/ubuntu/backend/backend>
+                <Files wsgi.py>
+                        Require all granted
+                </Files>
+        </Directory>
+        WSGIDaemonProcess backend python-path=/home/ubuntu/backend python-home=/home/ubuntu/venv
+        WSGIProcessGroup backend
+        WSGIScriptAlias / /home/ubuntu/backend/backend/wsgi.py
+
+
+</VirtualHost>
+
+
+
+
+
+
+
+    Connecting to Mysql:
+        $ sudo mysql -u root (or mysql -u root -p)
+    Config mysql:
+        Create database:
+            $ CREATE DATABASE IF NOT EXISTS database_name;
+        Create user:
+            $ CREATE USER 'database_user'@'localhost' IDENTIFIED BY 'database_password';
+            $ GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';
+            $ FLUSH PRIVILEGES;
+
+    If want to connect to the database:
+        $ mysql -u database_user -p database_password
+
+
+    If there is a database in other server and database created:
+        If working directory is backend/, change working directory to outside:
+            $ cd ..
+        export:
+            $ mysqldump -h _hostname -u _user -p _password --port=3306 --single-transaction --routines --triggers --databases  database database2 > file_name.sql (Enter database password if requested)
+            example:
+                $ mysqldump -h ae-django-db.cpg8jmousblr.ca-central-1.rds.amazonaws.com -u ae_django_db -p ae_django_db --port=3306 --single-transaction --routines --triggers --databases ae_django_db > current_database.sql  (Enter database password if requested)
+        import:
+            $ sudo mysql database_name < file_name.sql
+            example:
+                $ sudo mysql ae_django_db < current_database.sql
+
+
+    Create www directory:
+        $ mkdir /www && cd /www
+    Run these commands:
+        $ sudo gpasswd -a "ubuntu" www-data
+        $ sudo chown -R "ubuntu":www-data /www
+        and my be:
+            $ sudo find /www -type d -exec chmod 2770 {} \;
+        and then clone front data
+    Clone frontend code:
+        $ git clone https://github.com/kechkarayoub/ae_project_frontend.git
+    Rename directory to frontend:
+        $ mv ae_project_frontend/ frontend/  (ae_project_frontend is the name of cloned directory)
+    Change directory to frontend/:
+        $ cd frontend/
+    Install npm:
+        $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+        $ sudo apt-get install -y nodejs
+    Install requirements:
+        $ npm install
+    Create .env file:
+        $ nano .env
+
+    Install nginx:
+        $ sudo apt-get install nginx
+    Configure site-available:
+        $ sudo nano /etc/nginx/sites-available/default
+
+Content of default:
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        # SSL configuration
+        #
+        # listen 443 ssl default_server;
+        # listen [::]:443 ssl default_server;
+        #
+        # Note: You should disable gzip for SSL traffic.
+        # See: https://bugs.debian.org/773332
+        #
+        # Read up on ssl_ciphers to ensure a secure configuration.
+        # See: https://bugs.debian.org/765782
+        #
+        # Self signed certs generated by the ssl-cert package
+        # Don't use them in a production server!
+        #
+        # include snippets/snakeoil.conf;
+
+        root /www/frontend/build;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+        }
+        # pass PHP scripts to FastCGI server
+        #
+        #location ~ \.php$ {
+        #       include snippets/fastcgi-php.conf;
+        #
+        #       # With php-fpm (or other unix sockets):
+        #       fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        #       # With php-cgi (or other tcp sockets):
+        #       fastcgi_pass 127.0.0.1:9000;
+        #}
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #       deny all;
+        #}
+}
+
+run:
+    $ sudo ln -s /etc/nginx/sites-available/conf_file /etc/nginx/sites-enabled/conf_file
+
+
+For existing database:
+
+    Empty the django_migrations table:
+        Connect to mysql and choose database then run:
+            $ delete from django_migrations
+
+    For every app, delete its migrations folder: rm -rf <app>/migrations/:
+        Run:
+        $ rm -rf <app>/migrations/
+        Exemple:
+            rm -rf admin_data/migrations/
+            rm -rf contact/migrations/
+            rm -rf funding/migrations/
+            rm -rf item/migrations/
+            rm -rf newsletter/migrations/
+            rm -rf settings_db/migrations/
+            rm -rf sociallink/migrations/
+            rm -rf testimonial/migrations/
+            rm -rf usefullinks/migrations/
+    Production:
+        Reset the migrations for the "built-in" apps:
+            $ python manage.py migrate --fake --settings=backend.settings.production
+        For each app run:
+            $ python manage.py makemigrations <app> --settings=backend.settings.production
+            Take care of dependencies (models with ForeignKey's should run after their parent model).
+            Example:
+                python manage.py makemigrations admin_data --settings=backend.settings.production
+                python manage.py makemigrations contact --settings=backend.settings.production
+                python manage.py makemigrations funding --settings=backend.settings.production
+                python manage.py makemigrations item --settings=backend.settings.production
+                python manage.py makemigrations newsletter --settings=backend.settings.production
+                python manage.py makemigrations settings_db --settings=backend.settings.production
+                python manage.py makemigrations sociallink --settings=backend.settings.production
+                python manage.py makemigrations testimonial --settings=backend.settings.production
+                python manage.py makemigrations usefullinks --settings=backend.settings.production
+        Finally Run:
+            $ python manage.py migrate --fake-initial --settings=backend.settings.production
+            $ python manage.py migrate --fake --settings=backend.settings.production
+            $ python manage.py migrate --settings=backend.settings.production
+    Preproduction:
+        Reset the migrations for the "built-in" apps:
+            $ python manage.py migrate --fake --settings=backend.settings.preproduction
+        For each app run:
+            $ python manage.py makemigrations <app> --settings=backend.settings.preproduction
+            Take care of dependencies (models with ForeignKey's should run after their parent model).
+            Example:
+                python manage.py makemigrations admin_data --settings=backend.settings.preproduction
+                python manage.py makemigrations contact --settings=backend.settings.preproduction
+                python manage.py makemigrations funding --settings=backend.settings.preproduction
+                python manage.py makemigrations item --settings=backend.settings.preproduction
+                python manage.py makemigrations newsletter --settings=backend.settings.preproduction
+                python manage.py makemigrations settings_db --settings=backend.settings.preproduction
+                python manage.py makemigrations sociallink --settings=backend.settings.preproduction
+                python manage.py makemigrations testimonial --settings=backend.settings.preproduction
+                python manage.py makemigrations usefullinks --settings=backend.settings.preproduction
+        Finally Run:
+            $ python manage.py migrate --fake-initial --settings=backend.settings.preproduction
+            $ python manage.py migrate --fake --settings=backend.settings.preproduction
+            $ python manage.py migrate --settings=backend.settings.preproduction
+    Local:
+        Reset the migrations for the "built-in" apps:
+            $ python manage.py migrate --fake --settings=backend.settings.local
+        For each app run:
+            $ python manage.py makemigrations <app> --settings=backend.settings.local
+            Take care of dependencies (models with ForeignKey's should run after their parent model).
+            Example:
+                python manage.py makemigrations admin_data --settings=backend.settings.local
+                python manage.py makemigrations contact --settings=backend.settings.local
+                python manage.py makemigrations funding --settings=backend.settings.local
+                python manage.py makemigrations item --settings=backend.settings.local
+                python manage.py makemigrations newsletter --settings=backend.settings.local
+                python manage.py makemigrations settings_db --settings=backend.settings.local
+                python manage.py makemigrations sociallink --settings=backend.settings.local
+                python manage.py makemigrations testimonial --settings=backend.settings.local
+                python manage.py makemigrations usefullinks --settings=backend.settings.local
+        Finally Run:
+            $ python manage.py migrate --fake-initial --settings=backend.settings.local
+            $ python manage.py migrate --fake --settings=backend.settings.local
+            $ python manage.py migrate --settings=backend.settings.local
+
+
+Make migrations:
+    Production:
+    $ python manage.py makemigrations --settings=backend.settings.production
+    Preproduction:
+    $ python manage.py makemigrations --settings=backend.settings.preproduction
+    Local:
+    $ python manage.py makemigrations --settings=backend.settings.local
+Run migrations for first time(migrations archived):
+    Production:
+    $ python manage.py migrate --settings=backend.settings.production
+    Preproduction:
+    $ python manage.py migrate --settings=backend.settings.preproduction
+    Local:
+    $ python manage.py migrate --settings=backend.settings.local
+
+
+My be it must run:
+    #  $ sudo usermod -a -G www-data www-data
+    #  $ sudo chgrp -R www-data /home/ubuntu/backend && sudo chmod -R g+w /home/ubuntu/backend
+    #  $ sudo find /home/ubuntu/backend/ -type d -exec chmod 2775 {} \;
+    #  $ sudo find /home/ubuntu/backend/ -type f -exec chmod ug+rw {} \;
+    #  $ chgrp www-data /home/ubuntu/backend/media/
+    #  $ chmod g+rwxs /home/ubuntu/backend/media/
+    $ mkdir /home/ubuntu/log_backend
+    $ sudo groupadd ubuntuandwww
+    $ sudo usermod -a -G ubuntuandwww ubuntu
+    $ sudo usermod -a -G ubuntuandwww www-data
+    $ sudo chgrp -R ubuntuandwww /home/ubuntu/log_backend
+    $ sudo chmod -R 770 /home/ubuntu/log_backend
+    $ sudo chown -R www-data:www-data /home/ubuntu/backend/media/
+    $ sudo chmod -R 770 /home/ubuntu/backend/media/
+
+
+
+Translation:
+    Install gettext:
+        $ sudo apt-get install gettext
+    Mekemessages:
+        $ python manage.py makemessages --locale=fr --locale=en
+        or
+        $ python manage.py makemessages --all
+    Compilemessages:
+        $ python manage.py compilemessages --locale=fr --locale=en
+        or
+        $ python manage.py compilemessages
+
+
+
+
+
+
+Restart/Start apache:
+    $ sudo service apache2 restart/start
+Stop apache:
+    $ sudo service apache2 stop
+
+Restart/Start nginx:
+    $ sudo service nginx restart/start
+Stop apache:
+    $ sudo service nginx stop
+
+
+

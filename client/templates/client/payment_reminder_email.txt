@@ -1,0 +1,16 @@
+
+Bonjour,
+
+
+{{message_1}}
+
+{{message_2}}
+
+{{message_3}}
+
+
+{{footer_1}}
+{{footer_2}}
+
+
+For more information, visit this link: {{site_url_root}}

@@ -1,0 +1,10 @@
+{% extends "admin/change_list.html" %}
+{% load i18n admin_static %}
+
+{% block object-tools-items %}
+<li>
+    <div class="btn btn-high btn-success btn-import">Import</div>
+    <input type="file" class="import_input" style="opacity: 0; z-index: -1; width: 0;" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+</li>
+{{ block.super }}
+{% endblock %}

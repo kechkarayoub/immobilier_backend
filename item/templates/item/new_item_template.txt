@@ -1,0 +1,10 @@
+
+A new property has been added!
+
+{{property_label}}
+
+{{property_short_description}}
+
+{{property_description|truncatechars:1}}
+
+For more information, visit this link: {{site_url_root}}/#/property/{{property_id}}

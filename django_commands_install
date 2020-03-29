@@ -1,0 +1,14 @@
+install python
+install virtualenv
+activate venv
+
+django-admin startproject project_name
+
+python manage.py migrate
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+install gettext:
+    sudo apt-get install gettext

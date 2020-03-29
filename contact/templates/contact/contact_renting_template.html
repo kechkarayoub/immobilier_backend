@@ -1,0 +1,66 @@
+{% extends 'item/email_template.html' %}
+{% load i18n %}
+{% block content %}
+<tr>
+    <td style="text-align: center; font-size:18px; color: #a47355; padding-bottom: 25px;">
+        <b>{% trans "Renting a property!" %}</b>
+    </td>
+</tr>
+<tr>
+    <td style="width: 100%;">
+        <table style="width: 100%;">
+            <tr>
+                <td style="color: #a47355; width: 30%; padding-bottom: 5px; border-bottom: 1px solid gray;">
+                    {% trans "Client information" %}
+                </td>
+                <td style="width: 70%; padding-bottom: 5px; border-bottom: 1px solid gray;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>{% trans "Name" %}</td>
+                            <td>{{first_name}} {{last_name}}</td>
+                        </tr>
+                        <tr>
+                            <td>{% trans "Email" %}</td>
+                            <td>{{email}}</td>
+                        </tr>
+                        {% if phone %}
+                        <tr>
+                            <td>{% trans "Phone" %}</td>
+                            <td>{{phone}}</td>
+                        </tr>
+                        {% endif %}
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+<tr>
+    <td style="width: 100%; padding-bottom: 25px;">
+        <table style="width: 100%;">
+            <tr>
+                <td style="color: #a47355; width: 30%; padding-top: 5px;">
+                    {% trans "Property information" %}
+                </td>
+                <td style="width: 70%; padding-top: 5px;">
+                    <table style="width: 100%;">
+
+                        {% for information in property_information %}
+                        {% if information.1 %}
+                        <tr>
+                            <td>
+                                {{ information.0 }}
+                            </td>
+                            <td>
+                                {{ information.1 }}
+                            </td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% endblock %}

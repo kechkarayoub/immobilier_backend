@@ -1,0 +1,143 @@
+1. Install redis:
+    $ sudo apt-get install redis-server
+Check if installed:
+    $ redis-cli ping
+    #responsr: PONG
+2. Autostart Redis on server restart
+    $ sudo systemctl enable redis-server.service
+
+For production:
+1. Install gunicorn:
+    $ pip3 install gunicorn==20.0.4
+    # check if running:
+        $ gunicorn backend.wsgi:application  --bind 0.0.0.0:5000
+
+2. Pass
+3. Create environement.txt file in racine fof project with content:
+    export environement="production"
+4. Run this command in project directory:
+    production:
+        $ chmod u+x gunicorn_start_immo_prod.bash
+    preproduction:
+        $ chmod u+x gunicorn_start_preprod.bash
+5. Install supervisor:
+    $ sudo apt-get install supervisor
+6. create  /etc/supervisor/conf.d/gunicorn.conf file with content:
+-) for Production:
+
+
+; ================================
+;  gunicorn supervisor
+; ================================
+
+[program:backend]
+command = sh /home/ubuntu/backend/gunicorn_start_immo_prod.bash          ; Command to start app
+user = ubuntu                                               ; User to run as
+stdout_logfile = /home/ubuntu/logs/gunicorn/access.log  	; Where to write access log messages
+stderr_logfile = /home/ubuntu/logs/gunicorn/error.log  		; Where to write error log messages
+stdout_logfile_maxbytes=50
+stderr_logfile_maxbytes=50
+stdout_logfile_backups=10
+stderr_logfile_backups=10
+environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8             ; Set UTF-8 as default encoding
+
+-) for Preproduction:
+
+
+; ================================
+;  gunicorn supervisor
+; ================================
+
+[program:backend]
+command = sh /home/ubuntu/backend/gunicorn_start_immo_preprod.bash          ; Command to start app
+user = ubuntu                                               ; User to run as
+stdout_logfile = /home/ubuntu/logs/gunicorn/access.log  	; Where to write access log messages
+stderr_logfile = /home/ubuntu/logs/gunicorn/error.log  		; Where to write error log messages
+stdout_logfile_maxbytes=50
+stderr_logfile_maxbytes=50
+stdout_logfile_backups=10
+stderr_logfile_backups=10
+environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8             ; Set UTF-8 as default encoding
+
+(create directories):
+    mkdir /home/ubuntu/logs
+    mkdir /home/ubuntu/logs/gunicorn
+    mkdir /home/ubuntu/logs/celery
+
+7. create  /etc/supervisor/conf.d/celery_beat.conf file with content:
+
+; ================================
+;  celery beat supervisor
+; ================================
+
+[program:celerybeat]
+directory=/home/ubuntu/backend
+command=/home/ubuntu/venv/bin/celery beat -A backend --loglevel=INFO
+
+user=ubuntu
+numprocs=1
+stdout_logfile=/home/ubuntu/logs/celery/beat-access.log
+stderr_logfile=/home/ubuntu/logs/celery/beat-error.log
+stdout_logfile_maxbytes=50
+stderr_logfile_maxbytes=50
+stdout_logfile_backups=10
+stderr_logfile_backups=10
+autostart=true
+autorestart=true
+startsecs=10
+
+; Causes supervisor to send the termination signal (SIGTERM) to the whole process group.
+stopasgroup=true
+
+; if rabbitmq is supervised, set its priority higher
+; so it starts first
+priority=999
+
+
+
+8. create  /etc/supervisor/conf.d/celery_worker.conf file with content:
+
+; ==================================
+;  celery worker supervisor
+; ==================================
+
+[program:celery]
+directory=/home/ubuntu/backend
+command=/home/ubuntu/venv/bin/celery worker -A backend.celery --loglevel=INFO
+
+user=ubuntu
+numprocs=1
+stdout_logfile=/home/ubuntu/logs/celery/worker-access.log
+stderr_logfile=/home/ubuntu/logs/celery/worker-error.log
+stdout_logfile_maxbytes=50
+stderr_logfile_maxbytes=50
+stdout_logfile_backups=10
+stderr_logfile_backups=10
+autostart=true
+autorestart=true
+startsecs=10
+
+; Need to wait for currently executing tasks to finish at shutdown.
+; Increase this if you have very long running tasks.
+stopwaitsecs = 600
+
+; Causes supervisor to send the termination signal (SIGTERM) to the whole process group.
+stopasgroup=true
+
+; Set Celery priority higher than default (999)
+; so, if rabbitmq is supervised, it will start first
+priority=1000
+
+9. Run commands:
+    $ sudo supervisorctl reread
+    $ sudo supervisorctl update
+    $ sudo supervisorctl start all
+
+Supervisorctl commands:
+$ sudo supervisorctl status <program_name|all>
+$ sudo supervisorctl status all
+
+# to start, stop, restart all or some of the processes
+$ sudo supervisorctl start <program_name|all>
+$ sudo supervisorctl restart <program_name|all>
+$ sudo supervisorctl stop <program_name|all>

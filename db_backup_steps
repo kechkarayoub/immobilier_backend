@@ -1,0 +1,27 @@
+Dropbox backup:
+    1: Install django-dbbackup and django-storages
+        $ pip3 install django-dbbackup==3.2.0 django-storages==1.8
+    2: Add 'dbbackup' to INSTALLED_APPS
+    3: Create a dropbox account: https://www.dropbox.com
+    4: Go to: https://www.dropbox.com/developers/apps and click "Create app"
+    5: Choose "Dropbox API" --> Choose "App folder – Access to a single folder created specifically for your app." --> Enter "AppName"
+    6: Click on "Generated access token" and copy the generated tocken
+    7: Add these lines to setting file:
+        DBBACKUP_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+        DBBACKUP_STORAGE_OPTIONS = {
+            'oauth2_access_token': 'generated tocken in step 6',
+        }
+
+Create a dbbackup:
+    $ python manage.py dbbackup
+    The backup file is generated and stored in dropox account
+
+Restore a database:
+    $ python manage.py dbrestore -i db_file_name_stored
+
+Create a mediabackup:
+    $ python manage.py mediabackup
+    The backup file is generated and stored in dropox account
+
+Restore media files:
+    $ python manage.py mediarestore -i media_file_name_stored

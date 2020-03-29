@@ -1,0 +1,40 @@
+test:
+    coverage run manage.py test
+    coverage html OR coverage report
+
+translation:
+    sudo apt-get install gettext
+    mekemessages:
+        python manage.py makemessages --locale=fr --locale=en
+        or
+        python manage.py makemessages --all
+    compilemessages:
+        python manage.py compilemessages --locale=fr --locale=en
+        or
+        python manage.py compilemessages
+
+after modificating code:
+    sudo service apache2 restart
+
+
+
+import && export database:
+    export:
+        mysqldump -h _hostname -u _user -p _password --port=3306 --single-transaction --routines --triggers --databases  database database2 > file_name.sql
+        example:
+            mysqldump -h ae-django-db.cpg8jmousblr.ca-central-1.rds.amazonaws.com -u ae_django_db -p ae_django_db --port=3306 --single-transaction --routines --triggers --databases ae_django_db > current_database.sql
+    import:
+        sudo mysql database_name < file_name.sql
+        example:
+            sudo mysql ae_django_db < current_database.sql
+
+grant access to www-data to store in media:
+    sudo chown -R www-data:www-data /home/ubuntu/backend/media/
+    sudo chmod -R 770 /home/ubuntu/backend/media/
+
+smtp error:
+    https://stackoverflow.com/questions/16512592/login-credentials-not-working-with-gmail-smtp
+
+
+generaye requirements file:
+    pip3 freeze > requirements.txt
