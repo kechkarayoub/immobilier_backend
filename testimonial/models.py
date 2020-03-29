@@ -14,7 +14,7 @@ class Testimonial(models.Model):
         _("City"),
         blank=False,
         choices=choices_format_to_tuple(static_variables.CANADIAN_CITIES),
-        default='montreal',
+        default='sidi_rahhal',
         max_length=100,
         null=False
     )
