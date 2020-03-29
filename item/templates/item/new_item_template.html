@@ -5,9 +5,9 @@
 <tr>
     <td style="text-align: center; font-size:18px; color: #a47355; padding-bottom: 25px;">
         {% if is_updated %}
-            <b>{% trans "A property has been updated!" %}</b>
+            <b>{% trans "Une propriété a été mise à jour!" %}</b>
         {% else %}
-            <b>{% trans "A new property has been added!" %}</b>
+            <b>{% trans "Une nouvelle propriété a été ajoutée!" %}</b>
         {% endif %}
     </td>
 </tr>
@@ -44,7 +44,7 @@
 </tr>
 <tr>
     <td style="text-align: center; padding-bottom: 25px;">
-        <a href="{{site_url_root}}/#/property/{{property_id}}"><button style="background-color: #d7b878; border-radius: 15px; border: 0; margin: 10px; padding: 5px 15px; cursor: pointer; cursor: pointer;">{% trans "More infos..." %}</button></a>
+        <a href="{{site_url_root}}/#/property/{{property_id}}"><button style="background-color: #d7b878; border-radius: 15px; border: 0; margin: 10px; padding: 5px 15px; cursor: pointer; cursor: pointer;">{% trans "Plus d'informations..." %}</button></a>
     </td>
 </tr>
 {% endblock %}

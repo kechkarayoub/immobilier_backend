@@ -4,27 +4,27 @@
 {% block content %}
 <tr>
     <td style="text-align: center; font-size:18px; color: #a47355; padding-bottom: 25px;">
-        <b>{% trans "Unsubscribing to the newsletter" %}</b>
+        <b>{% trans "Se désabonner à la newsletter" %}</b>
     </td>
 </tr>
 <tr>
     <td style="font-size: 17px; text-transform: capitalize; padding-bottom: 15px;">
-        {% trans "Dear" %} <b>{{first_name}} {{last_name}}</b>,
+        {% trans "Chèr(e)" %} <b>{{first_name}} {{last_name}}</b>,
     </td>
 </tr>
 <tr>
     <td style="font-size: 16px; padding-bottom: 15px;">
-        {% trans "We'll miss you!" %}
+        {% trans "Vous nous manquerez!" %}
     </td>
 </tr>
 <tr>
     <td style="font-size: 16px; text-align: justify; padding-bottom: 25px;">
-        {% trans "You recently canceled your subscription in our newsletter and we're sorry to see you go. Thank you for being with us. There could be various reasons for leaving and we really hope you can help us learn and improve." %}
+        {% trans "Vous avez récemment annulé votre abonnement à notre newsletter et nous sommes désolés de vous voir partir. Merci d'être avec nous. Les raisons de votre départ peuvent être diverses et nous espérons vraiment que vous pourrez nous aider à apprendre et à nous améliorer." %}
     </td>
 </tr>
 <tr>
     <td style="padding-bottom: 25px;">
-        {% trans "You canceled your subscription by mistake?" %} <a href="{{resubscribe_url}}">{% trans "Re-subscribe from here" %}</a>
+        {% trans "Vous avez annulé votre abonnement par erreur?" %} <a href="{{resubscribe_url}}">{% trans "Ré-abonnez-vous d'ici" %}</a>
     </td>
 </tr>
 {% endblock %}

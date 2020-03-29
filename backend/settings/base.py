@@ -153,8 +153,8 @@ try:
     from .special_settings import LANGUAGES
 except:
     LANGUAGES = (
-        ('en', _('English')),
-        ('fr', _('French')),
+        ('en', _('Anglais')),
+        ('fr', _('Français')),
     )
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'fr'

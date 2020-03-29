@@ -14,20 +14,20 @@ ItemForm = select2_modelform(Item, attrs={'width': '250px'})
 def get_item_images_preview(obj):
     if obj.image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.image)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 def get_item_image_map_preview(obj):
     if obj.image_map:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.image_map)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 get_item_images_preview.allow_tags = True
-get_item_images_preview.short_description = _("Image Preview")
+get_item_images_preview.short_description = _("Aperçu de l'image")
 
 get_item_image_map_preview.allow_tags = True
-get_item_image_map_preview.short_description = _("Image Preview")
+get_item_image_map_preview.short_description = _("Aperçu de l'image")
 
 
 class ItemImagesInline(admin.StackedInline):
@@ -71,7 +71,7 @@ class ItemAdmin(TranslationAdmin):
                 'added_field_3_label', 'added_field_3_value',
             ]
         }),
-        (_("Options de carte"), {
+        (_("Options de la carte"), {
             'fields': ['with_map', 'gps_latitude', 'gps_longitude', ('image_map', get_item_image_map_preview,)]
         }),
         (None, {

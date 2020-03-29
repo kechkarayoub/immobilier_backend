@@ -8,11 +8,11 @@ from django.utils.safestring import mark_safe
 def get_bank_logo_preview(obj):
     if obj.image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.bank_logo)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 get_bank_logo_preview.allow_tags = True
-get_bank_logo_preview.short_description = _("Image Preview")
+get_bank_logo_preview.short_description = _("Aperçu de l'image")
 
 
 class FundingAdmin(admin.ModelAdmin):

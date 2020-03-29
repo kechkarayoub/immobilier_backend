@@ -86,7 +86,7 @@ class ViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
         self.assertFalse(content["data"]["success"])
-        self.assertEqual(content["data"]["message"], "Sorry, you haven't any subscription in our newsletter!")
+        self.assertEqual(content["data"]["message"], "Désolé, vous n'êtes pas inscrit à notre newsletter!")
 
         response = self.client.get(reverse('newsletter_unsubscribe'), {
             "user_email": "newsletter2@yopmail.com"
@@ -94,7 +94,7 @@ class ViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
         self.assertFalse(content["data"]["success"])
-        self.assertEqual(content["data"]["message"], "Your subscription is already deactivated!")
+        self.assertEqual(content["data"]["message"], "Votre abonnement est déjà désactivé!")
 
         response = self.client.get(reverse('newsletter_unsubscribe'), {
             "user_email": "newsletter1@yopmail.com"
@@ -102,7 +102,7 @@ class ViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
         self.assertTrue(content["data"]["success"])
-        self.assertEqual(content["data"]["message"], "Your subscription is deactivated!")
+        self.assertEqual(content["data"]["message"], "Votre abonnement est désactivé!")
 
     def test_newsletter_resubscribe(self):
         response = self.client.post(reverse('newsletter_resubscribe'))
@@ -114,7 +114,7 @@ class ViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
         self.assertFalse(content["data"]["success"])
-        self.assertEqual(content["data"]["message"], "Sorry, you haven't any subscription in our newsletter!")
+        self.assertEqual(content["data"]["message"], "Désolé, vous n'êtes pas inscrit à notre newsletter!")
 
         response = self.client.get(reverse('newsletter_resubscribe'), {
             "user_email": "newsletter2@yopmail.com"
@@ -122,7 +122,7 @@ class ViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
         self.assertTrue(content["data"]["success"])
-        self.assertEqual(content["data"]["message"], "Your subscription is reactivated!")
+        self.assertEqual(content["data"]["message"], "Votre abonnement est réactivé!")
 
         response = self.client.get(reverse('newsletter_resubscribe'), {
             "user_email": "newsletter1@yopmail.com"
@@ -130,4 +130,4 @@ class ViewsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         content = json.loads(response.content)
         self.assertFalse(content["data"]["success"])
-        self.assertEqual(content["data"]["message"], "Your subscription is already activated!")
+        self.assertEqual(content["data"]["message"], "Votre abonnement est déjà activé!")

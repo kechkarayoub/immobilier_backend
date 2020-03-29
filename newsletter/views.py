@@ -74,7 +74,7 @@ def newsletter_create(request):
         html_content = get_template('newsletter/subscription_template.html').render(context)
         text_content = get_template('newsletter/subscription_template.txt').render(context)
         send_email(
-            _("Subscription to the newsletter"),
+            _("Abonnement à la newsletter"),
             text_content,
             settings.EMAIL_HOST_USER,
             data["email"],
@@ -102,7 +102,7 @@ def newsletter_unsubscribe(request):
     if not Newsletter.objects.filter(email=user_email).exists():
         response = {
             "success": False,
-            "message": _("Sorry, you haven't any subscription in our newsletter!"),
+            "message": _("Désolé, vous n'êtes pas inscrit à notre newsletter!"),
         }
     else:
         subscription = Newsletter.objects.get(email=user_email)
@@ -125,17 +125,17 @@ def newsletter_unsubscribe(request):
             html_content = get_template('newsletter/unsubscription_template.html').render(context)
             text_content = get_template('newsletter/unsubscription_template.txt').render(context)
             send_email(
-                _("Unsubscription from the newsletter"), text_content, settings.EMAIL_HOST_USER, subscription.email,
+                _("Désinscription à la newsletter"), text_content, settings.EMAIL_HOST_USER, subscription.email,
                 html_content
             )
             response ={
                 "success": True,
-                "message": _("Your subscription is deactivated!"),
+                "message": _("Votre abonnement est désactivé!"),
             }
         else:
             response = {
                 "success": False,
-                "message": _("Your subscription is already deactivated!"),
+                "message": _("Votre abonnement est déjà désactivé!"),
             }
     return Response({
         'data': response
@@ -151,7 +151,7 @@ def newsletter_resubscribe(request):
     if not Newsletter.objects.filter(email=user_email).exists():
         response = {
             "success": False,
-            "message": _("Sorry, you haven't any subscription in our newsletter!"),
+            "message": _("Désolé, vous n'êtes pas inscrit à notre newsletter!"),
         }
     else:
         subscription = Newsletter.objects.get(email=user_email)
@@ -181,17 +181,17 @@ def newsletter_resubscribe(request):
             html_content = get_template('newsletter/resubscription_template.html').render(context)
             text_content = get_template('newsletter/resubscription_template.txt').render(context)
             send_email(
-                _("Resubscription to the newsletter"), text_content, settings.EMAIL_HOST_USER, subscription.email,
+                _("Réinscription à la newsletter"), text_content, settings.EMAIL_HOST_USER, subscription.email,
                 html_content
             )
             response = {
                 "success": True,
-                "message": _("Your subscription is reactivated!"),
+                "message": _("Votre abonnement est réactivé!"),
             }
         else:
             response = {
                 "success": False,
-                "message": _("Your subscription is already activated!"),
+                "message": _("Votre abonnement est déjà activé!"),
             }
     return Response({
         'data': response

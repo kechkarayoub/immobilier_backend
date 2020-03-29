@@ -1,5 +1,5 @@
 
-A new property has been added!
+Une nouvelle propriété a été ajoutée!
 
 {{property_label}}
 

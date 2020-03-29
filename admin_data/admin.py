@@ -9,11 +9,11 @@ from modeltranslation.admin import TranslationAdmin
 def get_admin_image_preview(obj):
     if obj.image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.image)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 get_admin_image_preview.allow_tags = True
-get_admin_image_preview.short_description = _("Image Preview")
+get_admin_image_preview.short_description = _("Aperçu de l'image")
 
 
 class AdminDataAdmin(TranslationAdmin):
@@ -26,10 +26,10 @@ class AdminDataAdmin(TranslationAdmin):
         '__str__', 'full_name', 'email', 'agency_name', 'fax', 'tel'
     )
     fieldsets = [
-        (_("General information"), {
+        (_("Informations genérales"), {
             'fields': ['full_name', 'agency_name', 'email', 'tel', 'fax', 'address', 'image', get_admin_image_preview]
         }),
-        (_("Map options"), {
+        (_("Options de la carte"), {
             'fields': ['enable_map', 'gps_latitude', 'gps_longitude']
         }),
     ]

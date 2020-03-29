@@ -4,7 +4,7 @@
 {% block content %}
 <tr>
     <td style="text-align: center; font-size:18px; color: #a47355; padding-bottom: 25px;">
-        <b>{% trans "Client contact" %}</b>
+        <b>{% trans "Contact du client" %}</b>
     </td>
 </tr>
 <tr>
@@ -12,12 +12,12 @@
         <table style="width: 100%;">
             <tr>
                 <td style="color: #a47355; width: 30%; padding-bottom: 5px; border-bottom: 1px solid gray;">
-                    {% trans "Client information" %}
+                    {% trans "Informations du client" %}
                 </td>
                 <td style="width: 70%; padding-bottom: 5px; border-bottom: 1px solid gray;">
                     <table style="width: 100%;">
                         <tr>
-                            <td>{% trans "Name" %}</td>
+                            <td>{% trans "Nom" %}</td>
                             <td style="text-transform: capitalize;">{{first_name}} {{last_name}}</td>
                         </tr>
                         <tr>
@@ -26,7 +26,7 @@
                         </tr>
                         {% if phone %}
                         <tr>
-                            <td>{% trans "Phone" %}</td>
+                            <td>{% trans "Téléphone" %}</td>
                             <td>{{phone}}</td>
                         </tr>
                         {% endif %}
@@ -54,7 +54,7 @@
 {% if property_url %}
 <tr>
     <td style="padding-bottom: 25px; text-align: justify;">
-        {% trans "The client needs more information about this property" %}: <a href="{{property_url}}">{{property_url}}</a>
+        {% trans "Le client a besoin de plus d'informations sur cette propriété" %}: <a href="{{property_url}}">{{property_url}}</a>
     </td>
 </tr>
 {% endif %}

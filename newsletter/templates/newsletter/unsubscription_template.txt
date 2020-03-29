@@ -1,9 +1,9 @@
 {{site_name}}
 
-Dear {{first_name}} {{last_name}},
+Chèr(e) {{first_name}} {{last_name}},
 
-We'll miss you!
+Vous nous manquerez!
 
-You recently canceled your subscription in our newsletter and we're sorry to see you go. Thank you for being with us. There could be various reasons for leaving and we really hope you can help us learn and improve.
+Vous avez récemment annulé votre abonnement à notre newsletter et nous sommes désolés de vous voir partir. Merci d'être avec nous. Les raisons de votre départ peuvent être diverses et nous espérons vraiment que vous pourrez nous aider à apprendre et à nous améliorer.
 
-You canceled your subscription by mistake? Resubscribe by clicking here: {{resubscribe_url}}
+Vous avez annulé votre abonnement par erreur? Resubscribe by clicking here: {{resubscribe_url}}

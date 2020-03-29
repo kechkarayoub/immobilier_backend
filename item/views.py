@@ -157,7 +157,7 @@ def send_property_to_newsletters(sender, **kwargs):
             newsletter_email['email'] for newsletter_email in Newsletter.objects.filter(is_active=True).values('email')
         ]
         msg = EmailMultiAlternatives(
-            _('A property has been updated' if is_updated else 'New property'), text_content,
+            _('Une propriété a été mise à jour' if is_updated else 'New property'), text_content,
             settings.EMAIL_HOST_USER, newsletters_emails[0:1], bcc=newsletters_emails[1:]
         )
         msg.attach_alternative(html_content, "text/html")

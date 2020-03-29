@@ -1,1 +1,1 @@
-Not interested to our messages? Unsubscribe from here: {{unsubscribe_url}}
+Pas intéressé par nos messages? Se désabonner d'ici: {{unsubscribe_url}}

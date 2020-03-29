@@ -100,7 +100,7 @@ class Client(models.Model):
 
 class YearMonthField(models.CharField):
     default_error_messages = {
-        'invalid': _('Enter a valid year and month.'),
+        'invalid': _('Entrez une année et un mois valides..'),
     }
 
     def __init__(self, input_formats=None, *args, **kwargs):

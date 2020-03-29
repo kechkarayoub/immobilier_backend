@@ -88,28 +88,28 @@ def contact_buy_create(request):
             "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
             "phone": data.get('phone', ""),
             "property_information": [
-                (_("Bathrooms number"), data.get('bathrooms_number_text', "")
+                (_("Nombre de salles de bain"), data.get('bathrooms_number_text', "")
                 if data.get('bathrooms_number', "") else ""),
-                (_("Bedrooms number"), data.get('bedrooms_number_text', "")
+                (_("Nombre de chambres"), data.get('bedrooms_number_text', "")
                 if data.get('bedrooms_number', "") else ""),
-                (_("Building type"), data.get('building_type_text', "") if data.get('building_type', "") else ""),
-                (_("City"), data.get('city_text', "") if data.get('city', "") else ""),
-                (_("Construction age"), data.get('construction_age_text', "")
+                (_("Type de bâtiment"), data.get('building_type_text', "") if data.get('building_type', "") else ""),
+                (_("Ville"), data.get('city_text', "") if data.get('city', "") else ""),
+                (_("Âge de construction"), data.get('construction_age_text', "")
                 if data.get('construction_age', "") else ""),
-                (_("Dining room"), data.get('has_dining_room', False)),
-                (_("Fireplace"), data.get('has_fireplace', False)),
+                (_("Salle à manger"), data.get('has_dining_room', False)),
+                (_("Cheminée"), data.get('has_fireplace', False)),
                 (_("Garage"), data.get('has_garage', False)),
-                (_("Garden"), data.get('has_garden', False)),
-                (_("Property size max"), str(data['lot_size_max'])
+                (_("Jardin"), data.get('has_garden', False)),
+                (_("Taille de la propriété maximale"), str(data['lot_size_max'])
                     if int(data.get('lot_size_max', 0)) > 0 else ""),
-                (_("Property size min"), str(data['lot_size_min'])
+                (_("Taille de la propriété minimale"), str(data['lot_size_min'])
                     if int(data.get('lot_size_min', 0)) > 0 else ""),
-                (_("Price range"), data.get('price_range_text', "") if data.get('price_range', "") else ""),
-                (_("Property type"), data.get('property_type_text', "") if  data.get('property_type', "") else ""),
-                (_("Occupation date"), data.get('occupation_date', "")),
-                (_("Other characteristics"), data.get('other_characteristics', "")),
-                (_("Status"), data.get('status_text', "")),
-                (_("Swimming pool"), data.get('has_swimming_pool', False))
+                (_("Intervalle de prix"), data.get('price_range_text', "") if data.get('price_range', "") else ""),
+                (_("Type de la Propriété"), data.get('property_type_text', "") if  data.get('property_type', "") else ""),
+                (_("Date d'occupation"), data.get('occupation_date', "")),
+                (_("Autres caractéristiques"), data.get('other_characteristics', "")),
+                (_("Statut"), data.get('status_text', "")),
+                (_("Piscine"), data.get('has_swimming_pool', False))
             ],
             "site_name": SettingsDb.get_site_name(),
             "site_url_root": settings.SITE_URL_ROOT,
@@ -119,7 +119,7 @@ def contact_buy_create(request):
         }
         html_content = get_template('contact/contact_buying_template.html').render(context)
         text_content = get_template('contact/contact_buying_template.txt').render(context)
-        send_email(_("Buying property"), text_content, data["email"], AdminData.get_admin_email(), html_content)
+        send_email(_("Achat d'une propriété"), text_content, data["email"], AdminData.get_admin_email(), html_content)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -158,28 +158,28 @@ def contact_rent_create(request):
             "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
             "phone": data.get('phone', ""),
             "property_information": [
-                (_("Bathrooms number"), data.get('bathrooms_number_text', "")
+                (_("Nombre de salles de bain"), data.get('bathrooms_number_text', "")
                 if data.get('bathrooms_number', "") else ""),
-                (_("Bedrooms number"), data.get('bedrooms_number_text', "")
+                (_("Nombre de chambres"), data.get('bedrooms_number_text', "")
                 if data.get('bedrooms_number', "") else ""),
-                (_("Building type"), data.get('building_type_text', "") if data.get('building_type', "") else ""),
-                (_("City"), data.get('city_text', "") if data.get('city', "") else ""),
-                (_("Construction age"), data.get('construction_age_text', "")
+                (_("Type de bâtiment"), data.get('building_type_text', "") if data.get('building_type', "") else ""),
+                (_("Ville"), data.get('city_text', "") if data.get('city', "") else ""),
+                (_("Âge de construction"), data.get('construction_age_text', "")
                 if data.get('construction_age', "") else ""),
-                (_("Dining room"), data.get('has_dining_room', False)),
-                (_("Fireplace"), data.get('has_fireplace', False)),
+                (_("Salle à manger"), data.get('has_dining_room', False)),
+                (_("Cheminée"), data.get('has_fireplace', False)),
                 (_("Garage"), data.get('has_garage', False)),
-                (_("Garden"), data.get('has_garden', False)),
-                (_("Property size max"), str(data['lot_size_max'])
+                (_("Jardin"), data.get('has_garden', False)),
+                (_("Taille de la propriété maximale"), str(data['lot_size_max'])
                     if int(data.get('lot_size_max', 0)) > 0 else ""),
-                (_("Property size min"), str(data['lot_size_min'])
+                (_("Taille de la propriété minimale"), str(data['lot_size_min'])
                     if int(data.get('lot_size_min', 0)) > 0 else ""),
-                (_("Price range"), data.get('price_range_text', "") if data.get('price_range', "") else ""),
-                (_("Property type"), data.get('property_type_text', "") if  data.get('property_type', "") else ""),
-                (_("Occupation date"), data.get('occupation_date', "")),
-                (_("Other characteristics"), data.get('other_characteristics', "")),
-                (_("Status"), data.get('status_text', "")),
-                (_("Swimming pool"), data.get('has_swimming_pool', False))
+                (_("Intervalle de prix"), data.get('price_range_text', "") if data.get('price_range', "") else ""),
+                (_("Type de la Propriété"), data.get('property_type_text', "") if  data.get('property_type', "") else ""),
+                (_("Date d'occupation"), data.get('occupation_date', "")),
+                (_("Autres caractéristiques"), data.get('other_characteristics', "")),
+                (_("Statut"), data.get('status_text', "")),
+                (_("Piscine"), data.get('has_swimming_pool', False))
             ],
             "site_name": SettingsDb.get_site_name(),
             "site_url_root": settings.SITE_URL_ROOT,
@@ -189,7 +189,7 @@ def contact_rent_create(request):
         }
         html_content = get_template('contact/contact_renting_template.html').render(context)
         text_content = get_template('contact/contact_renting_template.txt').render(context)
-        send_email(_("Renting property"), text_content, data["email"], AdminData.get_admin_email(), html_content)
+        send_email(_("location d'une propriété"), text_content, data["email"], AdminData.get_admin_email(), html_content)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

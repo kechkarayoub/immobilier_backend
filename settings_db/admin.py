@@ -13,41 +13,41 @@ import sys
 def get_header_image_preview(obj):
     if obj.header_image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.header_image)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 def get_header_background_image_preview(obj):
     if obj.header_background_image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.header_background_image)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 def get_main_bg_image_preview(obj):
     if obj.main_bg_image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.main_bg_image)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 def get_logo_image_preview(obj):
     if obj.logo:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.logo)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 get_header_image_preview.allow_tags = True
-get_header_image_preview.short_description = _("Preview de l'image du background de l'entete")
+get_header_image_preview.short_description = _("Aperçu de l'image du background de l'entête")
 
 
 get_header_background_image_preview.allow_tags = True
-get_header_background_image_preview.short_description = _("Preview de l'image du background de l'entete")
+get_header_background_image_preview.short_description = _("Aperçu de l'image du background de l'entête")
 
 
 get_main_bg_image_preview.allow_tags = True
-get_main_bg_image_preview.short_description = _("Preview de l'image principale du background de l'entete")
+get_main_bg_image_preview.short_description = _("Aperçu de l'image principale du background de l'entête")
 
 
 get_logo_image_preview.allow_tags = True
-get_logo_image_preview.short_description = _("Preview du l'image du logo")
+get_logo_image_preview.short_description = _("Aperçu du l'image du logo")
 
 
 class SettingsDbAdmin(TranslationAdmin):
@@ -61,7 +61,7 @@ class SettingsDbAdmin(TranslationAdmin):
         (_("Paramètres générals"), {
             'fields': ['main_bg_image', get_main_bg_image_preview]
         }),
-        (_("Paramètres de l'entete"), {
+        (_("Paramètres de l'entête"), {
             'fields': [
                 'site_name', 'header_background_image', get_header_background_image_preview, 'header_image',
                 get_header_image_preview, "header_text_color", "logo", get_logo_image_preview

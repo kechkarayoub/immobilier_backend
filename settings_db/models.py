@@ -25,7 +25,7 @@ class SettingsDb(models.Model):
     )
     header_text_color = ColorField(_("Couleur du texte de l'en-tête"), default='#FFFFFF')
     logo = models.ImageField(
-        blank=True, help_text=_("Image logo"), null=True, upload_to=settings.IMAGES_FOLDER + 'settings_db/header'
+        blank=True, help_text=_("Image du logo"), null=True, upload_to=settings.IMAGES_FOLDER + 'settings_db/header'
     )
     main_bg_image = models.ImageField(
         blank=True,

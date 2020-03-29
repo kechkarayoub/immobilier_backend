@@ -2,7 +2,7 @@ User info:
     Name: {{first_name}} {{last_name}}
     Email: {{email}}
     {% if phone %}
-    Phone: {{phone}}
+    Téléphone: {{phone}}
     {% endif %}
 
 Message:

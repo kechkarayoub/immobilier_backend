@@ -13,11 +13,11 @@ TestimonialForm = select2_modelform(Testimonial, attrs={'width': '250px'})
 def get_user_image_preview(obj):
     if obj.image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.image)))
-    return _("No file selected!")
+    return _("Aucun fichier sélectionné!")
 
 
 get_user_image_preview.allow_tags = True
-get_user_image_preview.short_description = _("Image Preview")
+get_user_image_preview.short_description = _("Aperçu de l'image")
 
 
 class TestimonialAdmin(admin.ModelAdmin):

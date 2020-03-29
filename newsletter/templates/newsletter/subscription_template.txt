@@ -1,10 +1,10 @@
 {{site_name}}
 
-Dear {{first_name}} {{last_name}},
+Chèr(e) {{first_name}} {{last_name}},
 
 Thank you!
 
-Thanks for subscribing to our newsletter.
+Merci de vous être abonné à notre newsletter.
 
 Visit {{site_url_root}}
 

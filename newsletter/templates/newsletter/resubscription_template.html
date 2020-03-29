@@ -4,22 +4,22 @@
 {% block content %}
 <tr>
     <td style="text-align: center; font-size:18px; color: #a47355; padding-bottom: 25px;">
-        <b>{% trans "Resubscribing to the newsletter" %}</b>
+        <b>{% trans "Réinscrire à la newsletter" %}</b>
     </td>
 </tr>
 <tr>
     <td style="font-size: 17px; text-transform: capitalize; padding-bottom: 15px;">
-        {% trans "Dear" %} <b>{{first_name}} {{last_name}}</b>,
+        {% trans "Chèr(e)" %} <b>{{first_name}} {{last_name}}</b>,
     </td>
 </tr>
 <tr>
     <td style="font-size: 16px; text-align: justify; padding-bottom: 15px;">
-        {% trans "Thanks for resubscribing to our newsletter." %}
+        {% trans "Merci de vous être réinscrit à notre newsletter." %}
     </td>
 </tr>
 <tr>
     <td style="text-align: center; padding-bottom: 25px;">
-        {% trans "Visit:" %} <a href="{{site_url_root}}"><button style="background-color: #d7b878; border-radius: 15px; border: 0; margin: 10px; padding: 5px 15px; cursor: pointer; cursor: pointer;">{{site_name}}</button></a>
+        {% trans "Visitez:" %} <a href="{{site_url_root}}"><button style="background-color: #d7b878; border-radius: 15px; border: 0; margin: 10px; padding: 5px 15px; cursor: pointer; cursor: pointer;">{{site_name}}</button></a>
     </td>
 </tr>
 {% endblock %}

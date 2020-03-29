@@ -35,7 +35,7 @@ class AdminTest(TestCase):
             short_description="short_description1",
             address="address1",
             description="description1",
-            city="motreal",
+            city="sidi_rahhal",
             property_type="apartment",
         )
         self.item2 = Item.objects.create(
@@ -44,7 +44,7 @@ class AdminTest(TestCase):
             short_description="short_description2",
             address="address2",
             description="description2",
-            city="motreal",
+            city="sidi_rahhal",
             property_type="apartment",
             image_map=SimpleUploadedFile(name='image_test.png', content=open(os.path.dirname(os.path.abspath(__file__)) + "/static/item/test/images/image_test.png", 'rb').read(), content_type='image/png'),
         )
@@ -57,11 +57,11 @@ class AdminTest(TestCase):
         )
 
     def test_get_item_images_preview(self):
-        self.assertEqual("No file selected!", get_item_images_preview(self.image_item2))
+        self.assertEqual("Aucun fichier sélectionné!", get_item_images_preview(self.image_item2))
         self.assertTrue(get_item_images_preview(self.image_item1).count('<img src="/media/images/item/itemsImages/image_test') == 1)
 
     def test_get_item_image_map_preview(self):
-        self.assertEqual("No file selected!", get_item_image_map_preview(self.item1))
+        self.assertEqual("Aucun fichier sélectionné!", get_item_image_map_preview(self.item1))
         self.assertTrue(get_item_image_map_preview(self.item2).count('<img src="/media/images/item/itemsImages/image_test') == 1)
 
     def test_save_model(self):
@@ -71,7 +71,7 @@ class AdminTest(TestCase):
             short_description="short_description",
             address="address",
             description="description",
-            city="motreal",
+            city="sidi_rahhal",
             property_type="apartment",
         )
         item_admin_instance = ItemAdmin(Item, self.admin_site)
@@ -83,7 +83,7 @@ class AdminTest(TestCase):
             short_description="short_description2",
             address="address2",
             description="description2",
-            city="motreal",
+            city="sidi_rahhal",
             property_type="apartment",
         )
         item_admin_instance.save_model(None, item2, None, False)
@@ -100,7 +100,7 @@ class ItemModelTest(TestCase):
             short_description="short_description1",
             address="address1",
             description="description1",
-            city="motreal",
+            city="sidi_rahhal",
             property_type="apartment",
         )
         self.item2 = Item.objects.create(
@@ -109,7 +109,7 @@ class ItemModelTest(TestCase):
             short_description="short_description2",
             address="address2",
             description="description2",
-            city="motreal",
+            city="sidi_rahhal",
             property_type="apartment",
             createdAt=datetime.now() - timedelta(days=9)
         )
@@ -132,7 +132,7 @@ class ItemImageModelTest(TestCase):
             short_description="short_description1",
             address="address1",
             description="description1",
-            city="motreal",
+            city="sidi_rahhal",
             property_type="apartment",
         )
         self.image_item = ItemImage.objects.create(
@@ -157,7 +157,7 @@ class ViewsTest(TestCase):
             short_description="short_description1",
             address="address1",
             description="description1",
-            city="montreal",
+            city="sidi_rahhal",
             property_type="apartment",
             price=300000,
             has_dining_room=True,
@@ -185,7 +185,7 @@ class ViewsTest(TestCase):
             short_description="short_description3",
             address="address3",
             description="description3",
-            city="montreal",
+            city="sidi_rahhal",
             property_type="apartment",
             construction_age="newly_built",
             bedrooms_number="1",
@@ -266,7 +266,7 @@ class ViewsTest(TestCase):
         self.assertEqual(len(content["data"]), 1)
 
         response = self.client.get(reverse('items_list'), {
-            "city": "montreal"
+            "city": "sidi_rahhal"
         })
         content = json.loads(response.content)
         self.assertEqual(len(content["data"]), 2)
@@ -368,7 +368,7 @@ class ViewsTest(TestCase):
 #             short_description="short_description",
 #             address="address",
 #             description="description",
-#             city="montreal",
+#             city="sidi_rahhal",
 #             property_type="apartment",
 #             price=300000,
 #             has_dining_room=True,

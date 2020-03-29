@@ -21,11 +21,11 @@ def links_list(request):
             categories_[category.label] = serializer.data
     guides = [
         {
-            "label": _("The Buyer's Guide (PDF)"),
+            "label": _("Le guide de l'acheteur (PDF)"),
             "url": settings.BACKEND_URL_ROOT + static("usefullinks/docs/en/buyers-guide.pdf" if True else "usefullinks/docs/fr/guide-acheteur.pdf")
         },
         {
-            "label": _("The Seller's Guide (PDF)"),
+            "label": _("Le guide du vendeur (PDF)"),
             "url": settings.BACKEND_URL_ROOT + static("usefullinks/docs/en/sellers-guide.pdf" if True else "usefullinks/docs/fr/guide-vendeur.pdf")
         }
     ]
