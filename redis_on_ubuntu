@@ -17,7 +17,7 @@ For production:
     export environement="production"
 4. Run this command in project directory:
     production:
-        $ chmod u+x gunicorn_start_immo_prod.bash
+        $ chmod u+x gunicorn_start_prod.bash
     preproduction:
         $ chmod u+x gunicorn_start_preprod.bash
 5. Install supervisor:
@@ -31,7 +31,7 @@ For production:
 ; ================================
 
 [program:backend]
-command = sh /home/ubuntu/backend/gunicorn_start_immo_prod.bash          ; Command to start app
+command = sh /home/ubuntu/backend/gunicorn_start_prod.bash          ; Command to start app
 user = ubuntu                                               ; User to run as
 stdout_logfile = /home/ubuntu/logs/gunicorn/access.log  	; Where to write access log messages
 stderr_logfile = /home/ubuntu/logs/gunicorn/error.log  		; Where to write error log messages
@@ -49,7 +49,7 @@ environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8             ; Set UTF-8 as defau
 ; ================================
 
 [program:backend]
-command = sh /home/ubuntu/backend/gunicorn_start_immo_preprod.bash          ; Command to start app
+command = sh /home/ubuntu/backend/gunicorn_start_preprod.bash          ; Command to start app
 user = ubuntu                                               ; User to run as
 stdout_logfile = /home/ubuntu/logs/gunicorn/access.log  	; Where to write access log messages
 stderr_logfile = /home/ubuntu/logs/gunicorn/error.log  		; Where to write error log messages

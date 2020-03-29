@@ -55,14 +55,14 @@ class GroupClient(models.Model):
             return cls.objects.get().to_reminder_email_data()
         except:
             return {
-                "object": "Rappelle: Paiement du loyer",
-                "message_1": "Veuillez payer votre loyer le 1er du mois. Si vous payer par Interac, veuillez utiliser"
-                             " le courriel suivant: Jalil.elmahboubi@gmail.com",
-                "message_2": "Une pénalité de 25.00$ sera ajouter après le 5 de chaque mois. \r\n Une pénalité de 125$ "
-                             "et demande de résiliation de votre bail si le retard dépasse 3 semaines.",
+                "object": _("Rappelle: Paiement du loyer"),
+                "message_1": _("Veuillez payer votre loyer le 1er du mois. Si vous payer par Interac, veuillez utiliser"
+                               " le courriel suivant: Jalil.elmahboubi@gmail.com"),
+                "message_2": _("Une pénalité de 25.00$ sera ajouter après le 5 de chaque mois. \r\n Une pénalité de "
+                               "125$ et demande de résiliation de votre bail si le retard dépasse 3 semaines."),
                 "message_3": "",
-                "footer_1": "Cordialement,",
-                "footer_2": "Jalil ELMAHBOUBI",
+                "footer_1": _("Cordialement,"),
+                "footer_2": _("Jalil ELMAHBOUBI"),
             }
 
     def to_reminder_email_data(self):
