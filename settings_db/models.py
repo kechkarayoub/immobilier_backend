@@ -3,6 +3,7 @@
 
 from colorfield.fields import ColorField
 from django.conf import settings
+from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.db import models
 from django.utils.translation import ugettext as _
 
