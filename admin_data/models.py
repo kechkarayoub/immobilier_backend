@@ -16,8 +16,8 @@ class AdminData(models.Model):
     enable_map = models.BooleanField(_("Activer la carte"), default=True)
     fax = models.CharField(_("Fax"), blank=False, default="450 462 1509", max_length=255, null=False)
     full_name = models.CharField(_("Nom complet"), blank=False, default="ELMAHBOUBI Abdjalil", max_length=255, null=False)
-    gps_latitude = models.FloatField(_("GPS Latitude"), blank=True, default=45.474459, null=True)
-    gps_longitude = models.FloatField(_("GPS Longitude"), blank=True, default=-73.470234, null=True)
+    gps_latitude = models.FloatField(_("GPS Latitude"), blank=True, default=33.477550, null=True)
+    gps_longitude = models.FloatField(_("GPS Longitude"), blank=True, default=-7.956865, null=True)
     image = models.ImageField(help_text=_("L'image de l'administrateur"), null=False, upload_to=settings.IMAGES_FOLDER + 'admin_data')
     tel = models.CharField(_("Téléphone"), blank=False, default="514 967 3743", max_length=255, null=False)
 
@@ -47,8 +47,8 @@ class AdminData(models.Model):
                 "tel": "514 967 3743",
                 "fax": "450 462 1509",
                 "position": {
-                    "gps_latitude": 45.474459,
-                    "gps_longitude": -73.470234,
+                    "gps_latitude": 33.477550,
+                    "gps_longitude": -7.956865,
                 }
             }
 

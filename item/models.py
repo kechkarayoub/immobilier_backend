@@ -82,8 +82,8 @@ class Item(models.Model):
     economic_value = models.DecimalField(
         _("Valeur économique (DH)"), blank=True, decimal_places=2, max_digits=11, null=True
     )
-    gps_latitude = models.FloatField(_("Latitude"), blank=True, default=46.813878, null=True)
-    gps_longitude = models.FloatField(_("Longitude"), blank=True, default=-71.207981, null=True)
+    gps_latitude = models.FloatField(_("Latitude"), blank=True, default=33.477550, null=True)
+    gps_longitude = models.FloatField(_("Longitude"), blank=True, default=-7.956865, null=True)
     gross_revenue_multiplier = models.DecimalField(
         _("Multiplicateur de revenu brut (MRB)"), blank=True, decimal_places=1, max_digits=4, null=True
     )
