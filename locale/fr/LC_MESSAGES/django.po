@@ -847,8 +847,8 @@ msgstr ""
 
 #: client/models.py:61
 msgid ""
-"Une pénalité de 25.00$ sera ajouter après le 5 de chaque mois. \r\n"
-" Une pénalité de 125$ et demande de résiliation de votre bail si le retard "
+"Une pénalité de 250.00 DH sera ajouter après le 5 de chaque mois. \r\n"
+" Une pénalité de 1250 DH et demande de résiliation de votre bail si le retard "
 "dépasse 3 semaines."
 msgstr ""
 
@@ -1095,7 +1095,7 @@ msgid "Étiquette du 3eme champ ajouté"
 msgstr ""
 
 #: item/models.py:25
-msgid "Revenus annuels ($)"
+msgid "Revenus annuels (DH)"
 msgstr ""
 
 #: item/models.py:27
@@ -1115,7 +1115,7 @@ msgid "CCD"
 msgstr ""
 
 #: item/models.py:75
-msgid "Coût par logement (CPL) ($)"
+msgid "Coût par logement (CPL) (DH)"
 msgstr ""
 
 #: item/models.py:77
@@ -1127,11 +1127,11 @@ msgid "Description"
 msgstr ""
 
 #: item/models.py:80
-msgid "Mise de fond minimal ($)"
+msgid "Mise de fond minimal (DH)"
 msgstr ""
 
 #: item/models.py:83
-msgid "Valeur économique ($)"
+msgid "Valeur économique (DH)"
 msgstr ""
 
 #: item/models.py:85
@@ -1168,7 +1168,7 @@ msgid "Taille de la propriété(m²)"
 msgstr ""
 
 #: item/models.py:106
-msgid "Prêt maximal ($)"
+msgid "Prêt maximal (DH)"
 msgstr ""
 
 #: item/models.py:109

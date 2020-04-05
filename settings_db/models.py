@@ -11,6 +11,13 @@ class SettingsDb(models.Model):
     class Meta:
         db_table = "settings_db"
 
+    emails_image = models.ImageField(
+        blank=True,
+        help_text=_("Image des email"),
+        null=True,
+        upload_to=settings.IMAGES_FOLDER + 'settings_db/header'
+    )
+
     header_image = models.ImageField(
         blank=True,
         help_text=_("Image d'en-tête"),
@@ -57,6 +64,16 @@ class SettingsDb(models.Model):
         return "Settings databases"
 
     @classmethod
+    def get_emails_image(cls):
+        try:
+            return (settings.BACKEND_URL_ROOT + cls.objects.get().emails_image.url) if cls.objects.get().emails_image\
+                and cls.objects.get().emails_image.url else (
+                    settings.BACKEND_URL_ROOT + static("contact/images/logo.png")
+            )
+        except:
+            return settings.BACKEND_URL_ROOT + static("contact/images/logo.png")
+
+    @classmethod
     def get_site_name(cls):
         try:
             return cls.objects.get().site_name
@@ -80,7 +97,7 @@ class SettingsDb(models.Model):
     def to_header_settings(self):
         return {
                 "header_image": (settings.BACKEND_URL_ROOT + self.header_image.url)
-                if self.header_image and self.header_image .url else "",
+                if self.header_image and self.header_image.url else "",
                 "header_background_image": (settings.BACKEND_URL_ROOT + self.header_background_image.url)
                 if self.header_background_image and self.header_background_image else "",
                 "header_text_color": self.header_text_color,

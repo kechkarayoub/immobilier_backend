@@ -16,7 +16,6 @@ from backend.utils import send_email, get_list_social_links_images
 
 @app.task
 def email_de_rappel_de_paiement(is_test=False, to_email_test="kechkarayoub@gmail.com"):
-    logo_url = settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg")
     site_name = SettingsDb.get_site_name()
     social_links = get_list_social_links()
     social_links_images = get_list_social_links_images()
@@ -25,7 +24,7 @@ def email_de_rappel_de_paiement(is_test=False, to_email_test="kechkarayoub@gmail
         context = {
             "backend_url": settings.BACKEND_URL_ROOT,
             "environment": settings.ENVIRONMENT,
-            "logo_url": logo_url,
+            "logo_url": SettingsDb.get_emails_image(),
             "message_1": reminder_email_data['message_1'],
             "message_2": reminder_email_data['message_2'],
             "message_3": reminder_email_data['message_3'],

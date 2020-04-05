@@ -138,7 +138,7 @@ def send_property_to_newsletters(sender, **kwargs):
         context = {
             "backend_url": settings.BACKEND_URL_ROOT,
             "environment": settings.ENVIRONMENT,
-            "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+            "logo_url": SettingsDb.get_emails_image(),
             "property_description": instance_data['description'],
             "property_id": instance_data['pk'],
             "property_images": images_items,

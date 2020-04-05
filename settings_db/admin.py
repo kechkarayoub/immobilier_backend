@@ -10,6 +10,12 @@ from modeltranslation.admin import TranslationAdmin
 import sys
 
 
+def get_emails_image_preview(obj):
+    if obj.emails_image:
+        return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.emails_image)))
+    return _("Aucun fichier selectioné!")
+
+
 def get_header_image_preview(obj):
     if obj.header_image:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.header_image)))
@@ -32,6 +38,10 @@ def get_logo_image_preview(obj):
     if obj.logo:
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (str(obj.logo)))
     return _("Aucun fichier sélectionné!")
+
+
+get_emails_image_preview.allow_tags = True
+get_emails_image_preview.short_description = _("Preview de l'image des emails.")
 
 
 get_header_image_preview.allow_tags = True
@@ -67,6 +77,9 @@ class SettingsDbAdmin(TranslationAdmin):
                 get_header_image_preview, "header_text_color", "logo", get_logo_image_preview
             ]
         }),
+        (_("Paramètres des emails"), {
+            'fields': ['emails_image', get_emails_image_preview]
+        }),
         (_("Paramètres de la page d'accueil"), {
             'fields': [
                 'home_page_title_1', 'home_page_title_2', 'home_page_row_1_title', 'home_page_row_1_p_1',
@@ -77,7 +90,8 @@ class SettingsDbAdmin(TranslationAdmin):
         }),
     ]
     readonly_fields = [
-        get_header_background_image_preview, get_header_image_preview, get_main_bg_image_preview, get_logo_image_preview
+        get_emails_image_preview, get_header_background_image_preview, get_header_image_preview,
+        get_main_bg_image_preview, get_logo_image_preview
     ]
 
     def save_model(self, request, obj, form, change):

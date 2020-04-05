@@ -38,7 +38,7 @@ def contact_sell_create(request):
                 "environment": settings.ENVIRONMENT,
                 "first_name": data['first_name'],
                 "last_name": data['last_name'],
-                "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+                "logo_url": SettingsDb.get_emails_image(),
                 "message": data['message'],
                 "site_name": SettingsDb.get_site_name(),
                 "site_url_root": settings.SITE_URL_ROOT,
@@ -85,7 +85,7 @@ def contact_buy_create(request):
             "environment": settings.ENVIRONMENT,
             "first_name": data['first_name'],
             "last_name": data['last_name'],
-            "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+            "logo_url": SettingsDb.get_emails_image(),
             "phone": data.get('phone', ""),
             "property_information": [
                 (_("Nombre de salles de bain"), data.get('bathrooms_number_text', "")
@@ -155,7 +155,7 @@ def contact_rent_create(request):
             "environment": settings.ENVIRONMENT,
             "first_name": data['first_name'],
             "last_name": data['last_name'],
-            "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+            "logo_url": SettingsDb.get_emails_image(),
             "phone": data.get('phone', ""),
             "property_information": [
                 (_("Nombre de salles de bain"), data.get('bathrooms_number_text', "")
@@ -214,7 +214,7 @@ def contact(request):
             "environment": settings.ENVIRONMENT,
             "first_name": data['first_name'],
             "last_name": data['last_name'],
-            "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+            "logo_url": SettingsDb.get_emails_image(),
             "message": data['message'],
             "site_name": SettingsDb.get_site_name(),
             "site_url_root": settings.SITE_URL_ROOT,

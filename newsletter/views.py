@@ -61,7 +61,7 @@ def newsletter_create(request):
             "first_name": data['first_name'],
             "footer_text_content": footer_text_content,
             "last_name": data['last_name'],
-            "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+            "logo_url": SettingsDb.get_emails_image(),
             "site_name": SettingsDb.get_site_name(),
             "site_url_root": settings.SITE_URL_ROOT,
             "social_links": get_list_social_links(),
@@ -112,7 +112,7 @@ def newsletter_unsubscribe(request):
                 "environment": settings.ENVIRONMENT,
                 "first_name": subscription.first_name,
                 "last_name": subscription.last_name,
-                "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+                "logo_url": SettingsDb.get_emails_image(),
                 "resubscribe_url": "{site_url_root}/#/newsletter/resubscribe/{user_email}".format(
                     site_url_root=settings.SITE_URL_ROOT, user_email=subscription.email
                 ),
@@ -168,7 +168,7 @@ def newsletter_resubscribe(request):
                 "first_name": subscription.first_name,
                 "footer_text_content": footer_text_content,
                 "last_name": subscription.last_name,
-                "logo_url": settings.BACKEND_URL_ROOT + static("contact/images/logo.jpg"),
+                "logo_url": SettingsDb.get_emails_image(),
                 "site_name": SettingsDb.get_site_name(),
                 "site_url_root": settings.SITE_URL_ROOT,
                 "show_unsubscribe_url": True,

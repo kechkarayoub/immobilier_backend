@@ -34,7 +34,7 @@ class GroupClient(models.Model):
     )
     reminder_payment_email_message2 = models.TextField(
         _("Paragraphe 2 de l'email de rappel de paiment"), blank=True,
-        default="Une pénalité de 25.00$ sera ajouter après le 5 de chaque mois. \r\n Une pénalité de 125$ et demande "
+        default="Une pénalité de 250.00 DH sera ajouter après le 5 de chaque mois. \r\n Une pénalité de 1250 DH et demande "
                 "de résiliation de votre bail si le retard dépasse 3 semaines.",
         help_text="Utiliser 'br/' à l'intérieur de <> pour retourner à la ligne.", null=True
     )
@@ -58,8 +58,8 @@ class GroupClient(models.Model):
                 "object": _("Rappelle: Paiement du loyer"),
                 "message_1": _("Veuillez payer votre loyer le 1er du mois. Si vous payer par Interac, veuillez utiliser"
                                " le courriel suivant: Jalil.elmahboubi@gmail.com"),
-                "message_2": _("Une pénalité de 25.00$ sera ajouter après le 5 de chaque mois. \r\n Une pénalité de "
-                               "125$ et demande de résiliation de votre bail si le retard dépasse 3 semaines."),
+                "message_2": _("Une pénalité de 250.00 DH sera ajouter après le 5 de chaque mois. \r\n Une pénalité de "
+                               "1250 DH et demande de résiliation de votre bail si le retard dépasse 3 semaines."),
                 "message_3": "",
                 "footer_1": _("Cordialement,"),
                 "footer_2": _("Jalil ELMAHBOUBI"),

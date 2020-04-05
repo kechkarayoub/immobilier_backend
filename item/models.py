@@ -22,7 +22,7 @@ class Item(models.Model):
     added_field_3_value = models.CharField(_("Valeur du 1er champ ajouté"), blank=True, max_length=255, null=True)
     address = models.CharField(_("Adresse"), blank=False, max_length=510, null=False)
     annual_income = models.DecimalField(
-        _("Revenus annuels ($)"), blank=True, decimal_places=2, max_digits=11, null=True
+        _("Revenus annuels (DH)"), blank=True, decimal_places=2, max_digits=11, null=True
     )
     apartments_number = models.PositiveIntegerField(_("Nombre d'appartements"), blank=True, null=True)
     bathrooms_number = models.CharField(
@@ -72,15 +72,15 @@ class Item(models.Model):
         max_length=50
     )
     cost_per_housing = models.DecimalField(
-        _("Coût par logement (CPL) ($)"), blank=True, decimal_places=2, max_digits=11, null=True
+        _("Coût par logement (CPL) (DH)"), blank=True, decimal_places=2, max_digits=11, null=True
     )
     createdAt = models.DateTimeField(_("Created at"), auto_now_add=True)
     description = models.TextField(_("Description"), blank=False, null=False)
     down_payment_required = models.DecimalField(
-        _("Mise de fond minimal ($)"), blank=True, decimal_places=2, max_digits=11, null=True
+        _("Mise de fond minimal (DH)"), blank=True, decimal_places=2, max_digits=11, null=True
     )
     economic_value = models.DecimalField(
-        _("Valeur économique ($)"), blank=True, decimal_places=2, max_digits=11, null=True
+        _("Valeur économique (DH)"), blank=True, decimal_places=2, max_digits=11, null=True
     )
     gps_latitude = models.FloatField(_("Latitude"), blank=True, default=46.813878, null=True)
     gps_longitude = models.FloatField(_("Longitude"), blank=True, default=-71.207981, null=True)
@@ -103,7 +103,7 @@ class Item(models.Model):
     label = models.CharField(_("Étiquette"), blank=False, max_length=255, null=False)
     lot_size = models.PositiveIntegerField(_("Taille de la propriété(m²)"), blank=True,  default=0, null=True)
     maximum_loan = models.DecimalField(
-        _("Prêt maximal ($)"), blank=True, decimal_places=2, max_digits=11, null=True
+        _("Prêt maximal (DH)"), blank=True, decimal_places=2, max_digits=11, null=True
     )
     net_income_multiplier = models.DecimalField(
         _("Multiplicateur de revenu net (MRN)"), blank=True, decimal_places=2, max_digits=5, null=True

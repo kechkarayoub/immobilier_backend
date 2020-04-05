@@ -82,7 +82,7 @@ class ViewsTest(TestCase):
             "bathrooms_number": "2",
             "bathrooms_number_text": "2",
             "price_range": "200_300",
-            "price_range_text": "200$-300$",
+            "price_range_text": "2000 DH-3000 DH",
             "lot_size_min": 0,
             "lot_size_mAX": 0,
             "has_dining_room": "",
