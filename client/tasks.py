@@ -38,7 +38,7 @@ def email_de_rappel_de_paiement(is_test=False, to_email_test="kechkarayoub@gmail
         html_content = get_template('client/payment_reminder_email.html').render(context)
         text_content = get_template('client/payment_reminder_email.txt').render(context)
         if is_test:
-            # f = open("/home/ubuntu/log_backend/test_log.txt", "w+")
+            # f = open("/home/ubuntu/log_immobilier_backend/test_log.txt", "w+")
             # f.write("hfgfhfhfh \r\n")
             # f.write("This is line {}\r\n".format(str(is_test)))
             # f.write("This is line {}\r\n".format(to_email_test))

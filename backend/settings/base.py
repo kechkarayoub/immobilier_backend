@@ -208,7 +208,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, '../log_backend/django.log'),
+            'filename': os.path.join(BASE_DIR, '../log_immobilier_backend/django.log'),
             'formatter': 'verbose',
         },
         'mail_admins': {
