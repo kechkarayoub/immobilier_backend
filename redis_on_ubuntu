@@ -17,12 +17,12 @@ For production:
     export environement="production"
 4. Run this command in project directory:
     production:
-        $ chmod u+x gunicorn_start_prod.bash
+        $ chmod u+x gunicorn_start_immo_prod.bash
     preproduction:
         $ chmod u+x gunicorn_start_preprod.bash
 5. Install supervisor:
     $ sudo apt-get install supervisor
-6. create  /etc/supervisor/conf.d/gunicorn.conf file with content:
+6. create  /etc/supervisor/conf.d/immobilier_gunicorn.conf file with content:
 -) for Production:
 
 
@@ -31,10 +31,10 @@ For production:
 ; ================================
 
 [program:backend]
-command = sh /home/ubuntu/backend/gunicorn_start_prod.bash          ; Command to start app
+command = sh /home/ubuntu/backend/gunicorn_start_immo_prod.bash          ; Command to start app
 user = ubuntu                                               ; User to run as
-stdout_logfile = /home/ubuntu/logs/gunicorn/access.log  	; Where to write access log messages
-stderr_logfile = /home/ubuntu/logs/gunicorn/error.log  		; Where to write error log messages
+stdout_logfile = /home/ubuntu/logs/immobilier_gunicorn/access.log  	; Where to write access log messages
+stderr_logfile = /home/ubuntu/logs/immobilier_gunicorn/error.log  		; Where to write error log messages
 stdout_logfile_maxbytes=50
 stderr_logfile_maxbytes=50
 stdout_logfile_backups=10
@@ -49,10 +49,10 @@ environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8             ; Set UTF-8 as defau
 ; ================================
 
 [program:backend]
-command = sh /home/ubuntu/backend/gunicorn_start_preprod.bash          ; Command to start app
+command = sh /home/ubuntu/backend/gunicorn_start_immo_prod.bash          ; Command to start app
 user = ubuntu                                               ; User to run as
-stdout_logfile = /home/ubuntu/logs/gunicorn/access.log  	; Where to write access log messages
-stderr_logfile = /home/ubuntu/logs/gunicorn/error.log  		; Where to write error log messages
+stdout_logfile = /home/ubuntu/logs/immobilier_gunicorn/access.log  	; Where to write access log messages
+stderr_logfile = /home/ubuntu/logs/immobilier_gunicorn/error.log  		; Where to write error log messages
 stdout_logfile_maxbytes=50
 stderr_logfile_maxbytes=50
 stdout_logfile_backups=10
@@ -61,23 +61,23 @@ environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8             ; Set UTF-8 as defau
 
 (create directories):
     mkdir /home/ubuntu/logs
-    mkdir /home/ubuntu/logs/gunicorn
-    mkdir /home/ubuntu/logs/celery
+    mkdir /home/ubuntu/logs/immobilier_gunicorn
+    mkdir /home/ubuntu/logs/immobilier_celery
 
-7. create  /etc/supervisor/conf.d/celery_beat.conf file with content:
+7. create  /etc/supervisor/conf.d/immobilier_celery_beat.conf file with content:
 
 ; ================================
 ;  celery beat supervisor
 ; ================================
 
 [program:celerybeat]
-directory=/home/ubuntu/backend
-command=/home/ubuntu/venv/bin/celery beat -A backend --loglevel=INFO
+directory=/home/ubuntu/immobilier_backend
+command=/home/ubuntu/immobilier_venv/bin/celery beat -A backend --loglevel=INFO
 
 user=ubuntu
 numprocs=1
-stdout_logfile=/home/ubuntu/logs/celery/beat-access.log
-stderr_logfile=/home/ubuntu/logs/celery/beat-error.log
+stdout_logfile=/home/ubuntu/logs/immobilier_celery/beat-access.log
+stderr_logfile=/home/ubuntu/logs/immobilier_celery/beat-error.log
 stdout_logfile_maxbytes=50
 stderr_logfile_maxbytes=50
 stdout_logfile_backups=10
@@ -95,20 +95,20 @@ priority=999
 
 
 
-8. create  /etc/supervisor/conf.d/celery_worker.conf file with content:
+8. create  /etc/supervisor/conf.d/immobilier_celery_worker.conf file with content:
 
 ; ==================================
 ;  celery worker supervisor
 ; ==================================
 
 [program:celery]
-directory=/home/ubuntu/backend
-command=/home/ubuntu/venv/bin/celery worker -A backend.celery --loglevel=INFO
+directory=/home/ubuntu/immobilier_backend
+command=/home/ubuntu/immobilier_venv/bin/celery worker -A backend.celery --loglevel=INFO
 
 user=ubuntu
 numprocs=1
-stdout_logfile=/home/ubuntu/logs/celery/worker-access.log
-stderr_logfile=/home/ubuntu/logs/celery/worker-error.log
+stdout_logfile=/home/ubuntu/logs/immobilier_celery/worker-access.log
+stderr_logfile=/home/ubuntu/logs/immobilier_celery/worker-error.log
 stdout_logfile_maxbytes=50
 stderr_logfile_maxbytes=50
 stdout_logfile_backups=10

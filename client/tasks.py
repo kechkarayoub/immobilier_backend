@@ -56,4 +56,3 @@ def email_de_rappel_de_paiement(is_test=False, to_email_test="kechkarayoub@gmail
         msg.content_subtype = 'html'
         msg.mixed_subtype = 'related'
         msg.send()
-        # send_email("Test celery", "Celery work perfectly", settings.EMAIL_HOST_USER, "kechkarayoub@gmail.com")

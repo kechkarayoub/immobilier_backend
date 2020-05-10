@@ -199,7 +199,6 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Canada/Eastern'
-CELERY_IMPORTS = ("settings_db.tasks")
 
 LOGGING = {
     'version': 1,
